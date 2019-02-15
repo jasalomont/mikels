@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Complain resource:
+
+  # CREATE
+  get("/complains/new", { :controller => "complains", :action => "new_form" })
+  post("/create_complain", { :controller => "complains", :action => "create_row" })
+
+  # READ
+  get("/complains", { :controller => "complains", :action => "index" })
+  get("/complains/:id_to_display", { :controller => "complains", :action => "show" })
+
+  # UPDATE
+  get("/complains/:prefill_with_id/edit", { :controller => "complains", :action => "edit_form" })
+  post("/update_complain/:id_to_modify", { :controller => "complains", :action => "update_row" })
+
+  # DELETE
+  get("/delete_complain/:id_to_remove", { :controller => "complains", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Budget resource:
 
   # CREATE

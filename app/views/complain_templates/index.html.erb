@@ -1,0 +1,182 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All complains
+    </h1>
+
+    <a href="/complains/new" class="btn btn-block btn-outline-secondary">
+      Add a new complain
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Complaintype
+        </th>
+
+        <th>
+          Solved
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Department
+        </th>
+
+        <th>
+          Itemnmbr
+        </th>
+
+        <th>
+          Sopnumbe
+        </th>
+
+        <th>
+          Profile
+        </th>
+
+        <th>
+          Rating
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Title
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @complains.each do |complain| %>
+      <tr>
+        <!-- Display complain.id start -->
+        <td>
+          <%= complain.id %>
+        </td>
+        <!-- Display complain.id end -->
+
+        <!-- Display complain.user_id start -->
+        <td>
+          <%= complain.user_id %>
+        </td>
+        <!-- Display complain.user_id end -->
+
+        <!-- Display complain.complaintype_id start -->
+        <td>
+          <%= complain.complaintype_id %>
+        </td>
+        <!-- Display complain.complaintype_id end -->
+
+        <!-- Display complain.solved start -->
+        <td>
+          <%= complain.solved %>
+        </td>
+        <!-- Display complain.solved end -->
+
+        <!-- Display complain.description start -->
+        <td>
+          <%= complain.description %>
+        </td>
+        <!-- Display complain.description end -->
+
+        <!-- Display complain.department_id start -->
+        <td>
+          <%= complain.department_id %>
+        </td>
+        <!-- Display complain.department_id end -->
+
+        <!-- Display complain.itemnmbr start -->
+        <td>
+          <%= complain.itemnmbr %>
+        </td>
+        <!-- Display complain.itemnmbr end -->
+
+        <!-- Display complain.sopnumbe start -->
+        <td>
+          <%= complain.sopnumbe %>
+        </td>
+        <!-- Display complain.sopnumbe end -->
+
+        <!-- Display complain.profile_id start -->
+        <td>
+          <%= complain.profile_id %>
+        </td>
+        <!-- Display complain.profile_id end -->
+
+        <!-- Display complain.rating start -->
+        <td>
+          <%= complain.rating %>
+        </td>
+        <!-- Display complain.rating end -->
+
+        <!-- Display complain.status start -->
+        <td>
+          <%= complain.status %>
+        </td>
+        <!-- Display complain.status end -->
+
+        <!-- Display complain.title start -->
+        <td>
+          <%= complain.title %>
+        </td>
+        <!-- Display complain.title end -->
+
+        <!-- Display complain.created_at start -->
+        <td>
+          <%= time_ago_in_words(complain.created_at) %> ago
+        </td>
+        <!-- Display complain.created_at end -->
+
+        <!-- Display complain.updated_at start -->
+        <td>
+          <%= time_ago_in_words(complain.updated_at) %> ago
+        </td>
+        <!-- Display complain.updated_at end -->
+
+        <td>
+          <a href="/complains/<%= complain.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
