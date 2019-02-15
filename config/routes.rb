@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Complaintype resource:
+
+  # CREATE
+  get("/complaintypes/new", { :controller => "complaintypes", :action => "new_form" })
+  post("/create_complaintype", { :controller => "complaintypes", :action => "create_row" })
+
+  # READ
+  get("/complaintypes", { :controller => "complaintypes", :action => "index" })
+  get("/complaintypes/:id_to_display", { :controller => "complaintypes", :action => "show" })
+
+  # UPDATE
+  get("/complaintypes/:prefill_with_id/edit", { :controller => "complaintypes", :action => "edit_form" })
+  post("/update_complaintype/:id_to_modify", { :controller => "complaintypes", :action => "update_row" })
+
+  # DELETE
+  get("/delete_complaintype/:id_to_remove", { :controller => "complaintypes", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Department resource:
 
   # CREATE
