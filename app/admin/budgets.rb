@@ -1,4 +1,6 @@
 ActiveAdmin.register Budget do
+
+ permit_params :year, :custnmbr, :salsterr, :gerente, :slprsnid, :sopnumbe, :ene, :feb, :mar, :abr, :may, :jun, :jul, :ago, :oct, :sep, :nov, :dic, :total, :agreement_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
