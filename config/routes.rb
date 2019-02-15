@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Rank resource:
+
+  # CREATE
+  get("/ranks/new", { :controller => "ranks", :action => "new_form" })
+  post("/create_rank", { :controller => "ranks", :action => "create_row" })
+
+  # READ
+  get("/ranks", { :controller => "ranks", :action => "index" })
+  get("/ranks/:id_to_display", { :controller => "ranks", :action => "show" })
+
+  # UPDATE
+  get("/ranks/:prefill_with_id/edit", { :controller => "ranks", :action => "edit_form" })
+  post("/update_rank/:id_to_modify", { :controller => "ranks", :action => "update_row" })
+
+  # DELETE
+  get("/delete_rank/:id_to_remove", { :controller => "ranks", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Profile resource:
 
   # CREATE
