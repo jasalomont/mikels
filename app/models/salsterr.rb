@@ -1,0 +1,8 @@
+class Salsterr < ApplicationRecord
+  # Direct associations
+
+  # Indirect associations
+
+  # Validations
+
+end

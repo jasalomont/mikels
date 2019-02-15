@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Salsterr #<%= @salsterr.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/salsterrs" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link salsterr start -->
+      <div class="col">
+        <a href="/salsterrs/<%= @salsterr.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit salsterr
+        </a>
+      </div>
+      <!-- Edit link salsterr end -->
+
+      <!-- Delete link salsterr start -->
+      <div class="col">
+        <a href="/delete_salsterr/<%= @salsterr.id %>" class="btn btn-block btn-outline-secondary">
+          Delete salsterr
+        </a>
+      </div>
+      <!-- Delete link salsterr end -->
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @salsterr.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Code
+      </dt>
+      <!-- Display code start -->
+      <dd>
+        <%= @salsterr.code %>
+      </dd>
+      <!-- Display code end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@salsterr.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@salsterr.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

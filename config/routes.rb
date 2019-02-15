@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Salsterr resource:
+
+  # CREATE
+  get("/salsterrs/new", { :controller => "salsterrs", :action => "new_form" })
+  post("/create_salsterr", { :controller => "salsterrs", :action => "create_row" })
+
+  # READ
+  get("/salsterrs", { :controller => "salsterrs", :action => "index" })
+  get("/salsterrs/:id_to_display", { :controller => "salsterrs", :action => "show" })
+
+  # UPDATE
+  get("/salsterrs/:prefill_with_id/edit", { :controller => "salsterrs", :action => "edit_form" })
+  post("/update_salsterr/:id_to_modify", { :controller => "salsterrs", :action => "update_row" })
+
+  # DELETE
+  get("/delete_salsterr/:id_to_remove", { :controller => "salsterrs", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Rank resource:
 
   # CREATE
