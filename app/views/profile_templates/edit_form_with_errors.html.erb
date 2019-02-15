@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form profile start -->
-<form action="/update_profile/<%= @profile.id %>" method="post">
+<form action="/update_profile/<%= @profile.id %>" method="post" enctype="multipart/form-data">
 <!-- Form profile end -->
 
   <!-- Label and input for user_id start -->
@@ -96,7 +96,8 @@
     </label>
 
     <!-- Input for profile_pic start -->
-    <input type="text" id="profile_pic" name="profile_pic" class="form-control" value="<%= @profile.profile_pic %>">
+    <%= cl_image_tag(@profile.profile_pic.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="profile_pic" name="profile_pic" class="form-control">
     <!-- Input for profile_pic end -->
   </div>
   <!-- Label and input for profile_pic end -->
