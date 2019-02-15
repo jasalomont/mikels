@@ -11,179 +11,139 @@
         </a>
       </div>
 
-      <!-- Edit link profile start -->
       <div class="col">
         <a href="/profiles/<%= @profile.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit profile
         </a>
       </div>
-      <!-- Edit link profile end -->
 
-      <!-- Delete link profile start -->
       <div class="col">
         <a href="/delete_profile/<%= @profile.id %>" class="btn btn-block btn-outline-secondary">
           Delete profile
         </a>
       </div>
-      <!-- Delete link profile end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <%= @profile.user_id %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @profile.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Last name
       </dt>
-      <!-- Display last_name start -->
       <dd>
         <%= @profile.last_name %>
       </dd>
-      <!-- Display last_name end -->
 
       <dt>
         Nick name
       </dt>
-      <!-- Display nick_name start -->
       <dd>
         <%= @profile.nick_name %>
       </dd>
-      <!-- Display nick_name end -->
 
       <dt>
         Phone
       </dt>
-      <!-- Display phone start -->
       <dd>
         <%= @profile.phone %>
       </dd>
-      <!-- Display phone end -->
 
       <dt>
         Mobile
       </dt>
-      <!-- Display mobile start -->
       <dd>
         <%= @profile.mobile %>
       </dd>
-      <!-- Display mobile end -->
 
       <dt>
         Profile pic
       </dt>
-      <!-- Display profile_pic start -->
       <dd>
         <img src="<%= @profile.profile_pic %>" class="img-fluid">
       </dd>
-      <!-- Display profile_pic end -->
 
       <dt>
         Rank
       </dt>
-      <!-- Display rank_id start -->
       <dd>
         <%= @profile.rank_id %>
       </dd>
-      <!-- Display rank_id end -->
 
       <dt>
         City base
       </dt>
-      <!-- Display city_base start -->
       <dd>
         <%= @profile.city_base %>
       </dd>
-      <!-- Display city_base end -->
 
       <dt>
         Address
       </dt>
-      <!-- Display address start -->
       <dd>
         <%= @profile.address %>
       </dd>
-      <!-- Display address end -->
 
       <dt>
         Active
       </dt>
-      <!-- Display active start -->
       <dd>
         <%= @profile.active %>
       </dd>
-      <!-- Display active end -->
 
       <dt>
         Slprsnid
       </dt>
-      <!-- Display slprsnid start -->
       <dd>
         <%= @profile.slprsnid %>
       </dd>
-      <!-- Display slprsnid end -->
 
       <dt>
         Salsterr
       </dt>
-      <!-- Display salsterr_id start -->
       <dd>
         <%= @profile.salsterr_id %>
       </dd>
-      <!-- Display salsterr_id end -->
 
       <dt>
         Start
       </dt>
-      <!-- Display start start -->
       <dd>
         <%= @profile.start %>
       </dd>
-      <!-- Display start end -->
 
       <dt>
         Full name
       </dt>
-      <!-- Display full_name start -->
       <dd>
         <%= @profile.full_name %>
       </dd>
-      <!-- Display full_name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@profile.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@profile.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

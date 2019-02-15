@@ -11,71 +11,55 @@
         </a>
       </div>
 
-      <!-- Edit link customer start -->
       <div class="col">
         <a href="/customers/<%= @customer.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit customer
         </a>
       </div>
-      <!-- Edit link customer end -->
 
-      <!-- Delete link customer start -->
       <div class="col">
         <a href="/delete_customer/<%= @customer.id %>" class="btn btn-block btn-outline-secondary">
           Delete customer
         </a>
       </div>
-      <!-- Delete link customer end -->
     </div>
 
     <dl>
       <dt>
         Custnmbr
       </dt>
-      <!-- Display custnmbr start -->
       <dd>
         <%= @customer.custnmbr %>
       </dd>
-      <!-- Display custnmbr end -->
 
       <dt>
         Custname
       </dt>
-      <!-- Display custname start -->
       <dd>
         <%= @customer.custname %>
       </dd>
-      <!-- Display custname end -->
 
       <dt>
         Customer segment
       </dt>
-      <!-- Display customer_segment_id start -->
       <dd>
         <%= @customer.customer_segment_id %>
       </dd>
-      <!-- Display customer_segment_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@customer.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@customer.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

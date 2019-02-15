@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @ventas2018.present? %>
   <% if @ventas2018.errors.any? %>
     <% @ventas2018.errors.full_messages.each do |message| %>
@@ -16,9 +15,7 @@
 
 <hr>
 
-<!-- Form ventas2018 start -->
 <form action="/create_ventas2018" method="post">
-<!-- Form ventas2018 end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create ventas2018

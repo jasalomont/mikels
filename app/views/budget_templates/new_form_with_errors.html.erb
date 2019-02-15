@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @budget.present? %>
   <% if @budget.errors.any? %>
     <% @budget.errors.full_messages.each do |message| %>
@@ -16,249 +15,167 @@
 
 <hr>
 
-<!-- Form budget start -->
 <form action="/create_budget" method="post">
-<!-- Form budget end -->
 
-  <!-- Label and input for year start -->
   <div class="form-group">
     <label for="year">
       Year
     </label>
 
-    <!-- Input for year start -->
     <input type="text" id="year" name="year" class="form-control" value="<%= @budget.year %>">
-    <!-- Input for year end -->
   </div>
-  <!-- Label and input for year end -->
 
-  <!-- Label and input for custnmbr start -->
   <div class="form-group">
     <label for="custnmbr">
       Custnmbr
     </label>
 
-    <!-- Input for custnmbr start -->
     <input type="text" id="custnmbr" name="custnmbr" class="form-control" value="<%= @budget.custnmbr %>">
-    <!-- Input for custnmbr end -->
   </div>
-  <!-- Label and input for custnmbr end -->
 
-  <!-- Label and input for salsterr start -->
   <div class="form-group">
     <label for="salsterr">
       Salsterr
     </label>
 
-    <!-- Input for salsterr start -->
     <input type="text" id="salsterr" name="salsterr" class="form-control" value="<%= @budget.salsterr %>">
-    <!-- Input for salsterr end -->
   </div>
-  <!-- Label and input for salsterr end -->
 
-  <!-- Label and input for gerente start -->
   <div class="form-group">
     <label for="gerente">
       Gerente
     </label>
 
-    <!-- Input for gerente start -->
     <input type="text" id="gerente" name="gerente" class="form-control" value="<%= @budget.gerente %>">
-    <!-- Input for gerente end -->
   </div>
-  <!-- Label and input for gerente end -->
 
-  <!-- Label and input for slprsnid start -->
   <div class="form-group">
     <label for="slprsnid">
       Slprsnid
     </label>
 
-    <!-- Input for slprsnid start -->
     <input type="text" id="slprsnid" name="slprsnid" class="form-control" value="<%= @budget.slprsnid %>">
-    <!-- Input for slprsnid end -->
   </div>
-  <!-- Label and input for slprsnid end -->
 
-  <!-- Label and input for sopnumbe start -->
   <div class="form-group">
     <label for="sopnumbe">
       Sopnumbe
     </label>
 
-    <!-- Input for sopnumbe start -->
     <input type="text" id="sopnumbe" name="sopnumbe" class="form-control" value="<%= @budget.sopnumbe %>">
-    <!-- Input for sopnumbe end -->
   </div>
-  <!-- Label and input for sopnumbe end -->
 
-  <!-- Label and input for ene start -->
   <div class="form-group">
     <label for="ene">
       Ene
     </label>
 
-    <!-- Input for ene start -->
     <input type="text" id="ene" name="ene" class="form-control" value="<%= @budget.ene %>">
-    <!-- Input for ene end -->
   </div>
-  <!-- Label and input for ene end -->
 
-  <!-- Label and input for feb start -->
   <div class="form-group">
     <label for="feb">
       Feb
     </label>
 
-    <!-- Input for feb start -->
     <input type="text" id="feb" name="feb" class="form-control" value="<%= @budget.feb %>">
-    <!-- Input for feb end -->
   </div>
-  <!-- Label and input for feb end -->
 
-  <!-- Label and input for mar start -->
   <div class="form-group">
     <label for="mar">
       Mar
     </label>
 
-    <!-- Input for mar start -->
     <input type="text" id="mar" name="mar" class="form-control" value="<%= @budget.mar %>">
-    <!-- Input for mar end -->
   </div>
-  <!-- Label and input for mar end -->
 
-  <!-- Label and input for abr start -->
   <div class="form-group">
     <label for="abr">
       Abr
     </label>
 
-    <!-- Input for abr start -->
     <input type="text" id="abr" name="abr" class="form-control" value="<%= @budget.abr %>">
-    <!-- Input for abr end -->
   </div>
-  <!-- Label and input for abr end -->
 
-  <!-- Label and input for may start -->
   <div class="form-group">
     <label for="may">
       May
     </label>
 
-    <!-- Input for may start -->
     <input type="text" id="may" name="may" class="form-control" value="<%= @budget.may %>">
-    <!-- Input for may end -->
   </div>
-  <!-- Label and input for may end -->
 
-  <!-- Label and input for jun start -->
   <div class="form-group">
     <label for="jun">
       Jun
     </label>
 
-    <!-- Input for jun start -->
     <input type="text" id="jun" name="jun" class="form-control" value="<%= @budget.jun %>">
-    <!-- Input for jun end -->
   </div>
-  <!-- Label and input for jun end -->
 
-  <!-- Label and input for jul start -->
   <div class="form-group">
     <label for="jul">
       Jul
     </label>
 
-    <!-- Input for jul start -->
     <input type="text" id="jul" name="jul" class="form-control" value="<%= @budget.jul %>">
-    <!-- Input for jul end -->
   </div>
-  <!-- Label and input for jul end -->
 
-  <!-- Label and input for ago start -->
   <div class="form-group">
     <label for="ago">
       Ago
     </label>
 
-    <!-- Input for ago start -->
     <input type="text" id="ago" name="ago" class="form-control" value="<%= @budget.ago %>">
-    <!-- Input for ago end -->
   </div>
-  <!-- Label and input for ago end -->
 
-  <!-- Label and input for oct start -->
   <div class="form-group">
     <label for="oct">
       Oct
     </label>
 
-    <!-- Input for oct start -->
     <input type="text" id="oct" name="oct" class="form-control" value="<%= @budget.oct %>">
-    <!-- Input for oct end -->
   </div>
-  <!-- Label and input for oct end -->
 
-  <!-- Label and input for sep start -->
   <div class="form-group">
     <label for="sep">
       Sep
     </label>
 
-    <!-- Input for sep start -->
     <input type="text" id="sep" name="sep" class="form-control" value="<%= @budget.sep %>">
-    <!-- Input for sep end -->
   </div>
-  <!-- Label and input for sep end -->
 
-  <!-- Label and input for nov start -->
   <div class="form-group">
     <label for="nov">
       Nov
     </label>
 
-    <!-- Input for nov start -->
     <input type="text" id="nov" name="nov" class="form-control" value="<%= @budget.nov %>">
-    <!-- Input for nov end -->
   </div>
-  <!-- Label and input for nov end -->
 
-  <!-- Label and input for dic start -->
   <div class="form-group">
     <label for="dic">
       Dic
     </label>
 
-    <!-- Input for dic start -->
     <input type="text" id="dic" name="dic" class="form-control" value="<%= @budget.dic %>">
-    <!-- Input for dic end -->
   </div>
-  <!-- Label and input for dic end -->
 
-  <!-- Label and input for total start -->
   <div class="form-group">
     <label for="total">
       Total
     </label>
 
-    <!-- Input for total start -->
     <input type="text" id="total" name="total" class="form-control" value="<%= @budget.total %>">
-    <!-- Input for total end -->
   </div>
-  <!-- Label and input for total end -->
 
-  <!-- Label and input for agreement_id start -->
   <div class="form-group">
     <label for="agreement_id">
       Agreement
     </label>
 
-    <!-- Input for agreement_id start -->
     <input type="text" id="agreement_id" name="agreement_id" class="form-control" value="<%= @budget.agreement_id %>">
-    <!-- Input for agreement_id end -->
   </div>
-  <!-- Label and input for agreement_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create budget

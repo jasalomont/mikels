@@ -11,143 +11,111 @@
         </a>
       </div>
 
-      <!-- Edit link complain start -->
       <div class="col">
         <a href="/complains/<%= @complain.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit complain
         </a>
       </div>
-      <!-- Edit link complain end -->
 
-      <!-- Delete link complain start -->
       <div class="col">
         <a href="/delete_complain/<%= @complain.id %>" class="btn btn-block btn-outline-secondary">
           Delete complain
         </a>
       </div>
-      <!-- Delete link complain end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <%= @complain.user_id %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Complaintype
       </dt>
-      <!-- Display complaintype_id start -->
       <dd>
         <%= @complain.complaintype_id %>
       </dd>
-      <!-- Display complaintype_id end -->
 
       <dt>
         Solved
       </dt>
-      <!-- Display solved start -->
       <dd>
         <%= @complain.solved %>
       </dd>
-      <!-- Display solved end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @complain.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Department
       </dt>
-      <!-- Display department_id start -->
       <dd>
         <%= @complain.department_id %>
       </dd>
-      <!-- Display department_id end -->
 
       <dt>
         Itemnmbr
       </dt>
-      <!-- Display itemnmbr start -->
       <dd>
         <%= @complain.itemnmbr %>
       </dd>
-      <!-- Display itemnmbr end -->
 
       <dt>
         Sopnumbe
       </dt>
-      <!-- Display sopnumbe start -->
       <dd>
         <%= @complain.sopnumbe %>
       </dd>
-      <!-- Display sopnumbe end -->
 
       <dt>
         Profile
       </dt>
-      <!-- Display profile_id start -->
       <dd>
         <%= @complain.profile_id %>
       </dd>
-      <!-- Display profile_id end -->
 
       <dt>
         Rating
       </dt>
-      <!-- Display rating start -->
       <dd>
         <%= @complain.rating %>
       </dd>
-      <!-- Display rating end -->
 
       <dt>
         Status
       </dt>
-      <!-- Display status start -->
       <dd>
         <%= @complain.status %>
       </dd>
-      <!-- Display status end -->
 
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @complain.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@complain.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@complain.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

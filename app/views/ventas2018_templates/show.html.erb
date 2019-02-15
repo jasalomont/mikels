@@ -11,44 +11,34 @@
         </a>
       </div>
 
-      <!-- Edit link ventas2018 start -->
       <div class="col">
         <a href="/ventas2018s/<%= @ventas2018.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit ventas2018
         </a>
       </div>
-      <!-- Edit link ventas2018 end -->
 
-      <!-- Delete link ventas2018 start -->
       <div class="col">
         <a href="/delete_ventas2018/<%= @ventas2018.id %>" class="btn btn-block btn-outline-secondary">
           Delete ventas2018
         </a>
       </div>
-      <!-- Delete link ventas2018 end -->
     </div>
 
     <dl>
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@ventas2018.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@ventas2018.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @profile.errors.any? %>
   <% @profile.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,189 +12,128 @@
 
 <hr>
 
-<!-- Form profile start -->
 <form action="/update_profile/<%= @profile.id %>" method="post" enctype="multipart/form-data">
-<!-- Form profile end -->
 
-  <!-- Label and input for user_id start -->
   <div class="form-group">
     <label for="user_id">
       User
     </label>
 
-    <!-- Input for user_id start -->
     <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @profile.user_id %>">
-    <!-- Input for user_id end -->
   </div>
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for name start -->
   <div class="form-group">
     <label for="name">
       Name
     </label>
 
-    <!-- Input for name start -->
     <input type="text" id="name" name="name" class="form-control" value="<%= @profile.name %>">
-    <!-- Input for name end -->
   </div>
-  <!-- Label and input for name end -->
 
-  <!-- Label and input for last_name start -->
   <div class="form-group">
     <label for="last_name">
       Last name
     </label>
 
-    <!-- Input for last_name start -->
     <input type="text" id="last_name" name="last_name" class="form-control" value="<%= @profile.last_name %>">
-    <!-- Input for last_name end -->
   </div>
-  <!-- Label and input for last_name end -->
 
-  <!-- Label and input for nick_name start -->
   <div class="form-group">
     <label for="nick_name">
       Nick name
     </label>
 
-    <!-- Input for nick_name start -->
     <input type="text" id="nick_name" name="nick_name" class="form-control" value="<%= @profile.nick_name %>">
-    <!-- Input for nick_name end -->
   </div>
-  <!-- Label and input for nick_name end -->
 
-  <!-- Label and input for phone start -->
   <div class="form-group">
     <label for="phone">
       Phone
     </label>
 
-    <!-- Input for phone start -->
     <input type="text" id="phone" name="phone" class="form-control" value="<%= @profile.phone %>">
-    <!-- Input for phone end -->
   </div>
-  <!-- Label and input for phone end -->
 
-  <!-- Label and input for mobile start -->
   <div class="form-group">
     <label for="mobile">
       Mobile
     </label>
 
-    <!-- Input for mobile start -->
     <input type="text" id="mobile" name="mobile" class="form-control" value="<%= @profile.mobile %>">
-    <!-- Input for mobile end -->
   </div>
-  <!-- Label and input for mobile end -->
 
-  <!-- Label and input for profile_pic start -->
   <div class="form-group">
     <label for="profile_pic">
       Profile pic
     </label>
 
-    <!-- Input for profile_pic start -->
     <%= cl_image_tag(@profile.profile_pic.to_s, :width => 90, :height => 90, :crop => :thumb) %>
     <input type="file" id="profile_pic" name="profile_pic" class="form-control">
-    <!-- Input for profile_pic end -->
   </div>
-  <!-- Label and input for profile_pic end -->
 
-  <!-- Label and input for rank_id start -->
   <div class="form-group">
     <label for="rank_id">
       Rank
     </label>
 
-    <!-- Input for rank_id start -->
     <input type="text" id="rank_id" name="rank_id" class="form-control" value="<%= @profile.rank_id %>">
-    <!-- Input for rank_id end -->
   </div>
-  <!-- Label and input for rank_id end -->
 
-  <!-- Label and input for city_base start -->
   <div class="form-group">
     <label for="city_base">
       City base
     </label>
 
-    <!-- Input for city_base start -->
     <input type="text" id="city_base" name="city_base" class="form-control" value="<%= @profile.city_base %>">
-    <!-- Input for city_base end -->
   </div>
-  <!-- Label and input for city_base end -->
 
-  <!-- Label and input for address start -->
   <div class="form-group">
     <label for="address">
       Address
     </label>
 
-    <!-- Input for address start -->
     <textarea id="address" name="address" class="form-control" rows="3"><%= @profile.address %></textarea>
-    <!-- Input for address end -->
   </div>
-  <!-- Label and input for address end -->
 
-  <!-- Label and input for active start -->
   <div class="form-check">
     <input type="hidden" value="0" name="active">
-    <!-- Input for active start -->
     <input id="active" class="form-check-input" name="active" type="checkbox" value="1" <%= "checked" if @profile.active %>>
-    <!-- Input for active end -->
     <label for="active" class="form-check-label">
       Active
     </label>
   </div>
 
-  <!-- Label and input for slprsnid start -->
   <div class="form-group">
     <label for="slprsnid">
       Slprsnid
     </label>
 
-    <!-- Input for slprsnid start -->
     <input type="text" id="slprsnid" name="slprsnid" class="form-control" value="<%= @profile.slprsnid %>">
-    <!-- Input for slprsnid end -->
   </div>
-  <!-- Label and input for slprsnid end -->
 
-  <!-- Label and input for salsterr_id start -->
   <div class="form-group">
     <label for="salsterr_id">
       Salsterr
     </label>
 
-    <!-- Input for salsterr_id start -->
     <input type="text" id="salsterr_id" name="salsterr_id" class="form-control" value="<%= @profile.salsterr_id %>">
-    <!-- Input for salsterr_id end -->
   </div>
-  <!-- Label and input for salsterr_id end -->
 
-  <!-- Label and input for start start -->
   <div class="form-group">
     <label for="start">
       Start
     </label>
 
-    <!-- Input for start start -->
     <input type="text" id="start" name="start" class="form-control" value="<%= @profile.start %>">
-    <!-- Input for start end -->
   </div>
-  <!-- Label and input for start end -->
 
-  <!-- Label and input for full_name start -->
   <div class="form-group">
     <label for="full_name">
       Full name
     </label>
 
-    <!-- Input for full_name start -->
     <input type="text" id="full_name" name="full_name" class="form-control" value="<%= @profile.full_name %>">
-    <!-- Input for full_name end -->
   </div>
-  <!-- Label and input for full_name end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update profile

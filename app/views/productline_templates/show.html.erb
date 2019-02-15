@@ -11,71 +11,55 @@
         </a>
       </div>
 
-      <!-- Edit link productline start -->
       <div class="col">
         <a href="/productlines/<%= @productline.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit productline
         </a>
       </div>
-      <!-- Edit link productline end -->
 
-      <!-- Delete link productline start -->
       <div class="col">
         <a href="/delete_productline/<%= @productline.id %>" class="btn btn-block btn-outline-secondary">
           Delete productline
         </a>
       </div>
-      <!-- Delete link productline end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @productline.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @productline.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Subcategory
       </dt>
-      <!-- Display subcategory_id start -->
       <dd>
         <%= @productline.subcategory_id %>
       </dd>
-      <!-- Display subcategory_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@productline.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@productline.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

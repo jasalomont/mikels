@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @nineteensale.errors.any? %>
   <% @nineteensale.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,561 +12,375 @@
 
 <hr>
 
-<!-- Form nineteensale start -->
 <form action="/update_nineteensale/<%= @nineteensale.id %>" method="post">
-<!-- Form nineteensale end -->
 
-  <!-- Label and input for custnmbr start -->
   <div class="form-group">
     <label for="custnmbr">
       Custnmbr
     </label>
 
-    <!-- Input for custnmbr start -->
     <input type="text" id="custnmbr" name="custnmbr" class="form-control" value="<%= @nineteensale.custnmbr %>">
-    <!-- Input for custnmbr end -->
   </div>
-  <!-- Label and input for custnmbr end -->
 
-  <!-- Label and input for salsterr start -->
   <div class="form-group">
     <label for="salsterr">
       Salsterr
     </label>
 
-    <!-- Input for salsterr start -->
     <input type="text" id="salsterr" name="salsterr" class="form-control" value="<%= @nineteensale.salsterr %>">
-    <!-- Input for salsterr end -->
   </div>
-  <!-- Label and input for salsterr end -->
 
-  <!-- Label and input for slprsnid start -->
   <div class="form-group">
     <label for="slprsnid">
       Slprsnid
     </label>
 
-    <!-- Input for slprsnid start -->
     <input type="text" id="slprsnid" name="slprsnid" class="form-control" value="<%= @nineteensale.slprsnid %>">
-    <!-- Input for slprsnid end -->
   </div>
-  <!-- Label and input for slprsnid end -->
 
-  <!-- Label and input for gerente start -->
   <div class="form-group">
     <label for="gerente">
       Gerente
     </label>
 
-    <!-- Input for gerente start -->
     <input type="text" id="gerente" name="gerente" class="form-control" value="<%= @nineteensale.gerente %>">
-    <!-- Input for gerente end -->
   </div>
-  <!-- Label and input for gerente end -->
 
-  <!-- Label and input for sopnumbe start -->
   <div class="form-group">
     <label for="sopnumbe">
       Sopnumbe
     </label>
 
-    <!-- Input for sopnumbe start -->
     <input type="text" id="sopnumbe" name="sopnumbe" class="form-control" value="<%= @nineteensale.sopnumbe %>">
-    <!-- Input for sopnumbe end -->
   </div>
-  <!-- Label and input for sopnumbe end -->
 
-  <!-- Label and input for itemnmbr start -->
   <div class="form-group">
     <label for="itemnmbr">
       Itemnmbr
     </label>
 
-    <!-- Input for itemnmbr start -->
     <input type="text" id="itemnmbr" name="itemnmbr" class="form-control" value="<%= @nineteensale.itemnmbr %>">
-    <!-- Input for itemnmbr end -->
   </div>
-  <!-- Label and input for itemnmbr end -->
 
-  <!-- Label and input for vta start -->
   <div class="form-group">
     <label for="vta">
       Vta
     </label>
 
-    <!-- Input for vta start -->
     <input type="text" id="vta" name="vta" class="form-control" value="<%= @nineteensale.vta %>">
-    <!-- Input for vta end -->
   </div>
-  <!-- Label and input for vta end -->
 
-  <!-- Label and input for cantidad start -->
   <div class="form-group">
     <label for="cantidad">
       Cantidad
     </label>
 
-    <!-- Input for cantidad start -->
     <input type="text" id="cantidad" name="cantidad" class="form-control" value="<%= @nineteensale.cantidad %>">
-    <!-- Input for cantidad end -->
   </div>
-  <!-- Label and input for cantidad end -->
 
-  <!-- Label and input for cost start -->
   <div class="form-group">
     <label for="cost">
       Cost
     </label>
 
-    <!-- Input for cost start -->
     <input type="text" id="cost" name="cost" class="form-control" value="<%= @nineteensale.cost %>">
-    <!-- Input for cost end -->
   </div>
-  <!-- Label and input for cost end -->
 
-  <!-- Label and input for vta_ene start -->
   <div class="form-group">
     <label for="vta_ene">
       Vta ene
     </label>
 
-    <!-- Input for vta_ene start -->
     <input type="text" id="vta_ene" name="vta_ene" class="form-control" value="<%= @nineteensale.vta_ene %>">
-    <!-- Input for vta_ene end -->
   </div>
-  <!-- Label and input for vta_ene end -->
 
-  <!-- Label and input for cantidad_ene start -->
   <div class="form-group">
     <label for="cantidad_ene">
       Cantidad ene
     </label>
 
-    <!-- Input for cantidad_ene start -->
     <input type="text" id="cantidad_ene" name="cantidad_ene" class="form-control" value="<%= @nineteensale.cantidad_ene %>">
-    <!-- Input for cantidad_ene end -->
   </div>
-  <!-- Label and input for cantidad_ene end -->
 
-  <!-- Label and input for cost_ene start -->
   <div class="form-group">
     <label for="cost_ene">
       Cost ene
     </label>
 
-    <!-- Input for cost_ene start -->
     <input type="text" id="cost_ene" name="cost_ene" class="form-control" value="<%= @nineteensale.cost_ene %>">
-    <!-- Input for cost_ene end -->
   </div>
-  <!-- Label and input for cost_ene end -->
 
-  <!-- Label and input for vta_feb start -->
   <div class="form-group">
     <label for="vta_feb">
       Vta feb
     </label>
 
-    <!-- Input for vta_feb start -->
     <input type="text" id="vta_feb" name="vta_feb" class="form-control" value="<%= @nineteensale.vta_feb %>">
-    <!-- Input for vta_feb end -->
   </div>
-  <!-- Label and input for vta_feb end -->
 
-  <!-- Label and input for cantidad_feb start -->
   <div class="form-group">
     <label for="cantidad_feb">
       Cantidad feb
     </label>
 
-    <!-- Input for cantidad_feb start -->
     <input type="text" id="cantidad_feb" name="cantidad_feb" class="form-control" value="<%= @nineteensale.cantidad_feb %>">
-    <!-- Input for cantidad_feb end -->
   </div>
-  <!-- Label and input for cantidad_feb end -->
 
-  <!-- Label and input for cost_feb start -->
   <div class="form-group">
     <label for="cost_feb">
       Cost feb
     </label>
 
-    <!-- Input for cost_feb start -->
     <input type="text" id="cost_feb" name="cost_feb" class="form-control" value="<%= @nineteensale.cost_feb %>">
-    <!-- Input for cost_feb end -->
   </div>
-  <!-- Label and input for cost_feb end -->
 
-  <!-- Label and input for vta_mar start -->
   <div class="form-group">
     <label for="vta_mar">
       Vta mar
     </label>
 
-    <!-- Input for vta_mar start -->
     <input type="text" id="vta_mar" name="vta_mar" class="form-control" value="<%= @nineteensale.vta_mar %>">
-    <!-- Input for vta_mar end -->
   </div>
-  <!-- Label and input for vta_mar end -->
 
-  <!-- Label and input for cantidad_mar start -->
   <div class="form-group">
     <label for="cantidad_mar">
       Cantidad mar
     </label>
 
-    <!-- Input for cantidad_mar start -->
     <input type="text" id="cantidad_mar" name="cantidad_mar" class="form-control" value="<%= @nineteensale.cantidad_mar %>">
-    <!-- Input for cantidad_mar end -->
   </div>
-  <!-- Label and input for cantidad_mar end -->
 
-  <!-- Label and input for cost_mar start -->
   <div class="form-group">
     <label for="cost_mar">
       Cost mar
     </label>
 
-    <!-- Input for cost_mar start -->
     <input type="text" id="cost_mar" name="cost_mar" class="form-control" value="<%= @nineteensale.cost_mar %>">
-    <!-- Input for cost_mar end -->
   </div>
-  <!-- Label and input for cost_mar end -->
 
-  <!-- Label and input for vta_abr start -->
   <div class="form-group">
     <label for="vta_abr">
       Vta abr
     </label>
 
-    <!-- Input for vta_abr start -->
     <input type="text" id="vta_abr" name="vta_abr" class="form-control" value="<%= @nineteensale.vta_abr %>">
-    <!-- Input for vta_abr end -->
   </div>
-  <!-- Label and input for vta_abr end -->
 
-  <!-- Label and input for cantidad_abr start -->
   <div class="form-group">
     <label for="cantidad_abr">
       Cantidad abr
     </label>
 
-    <!-- Input for cantidad_abr start -->
     <input type="text" id="cantidad_abr" name="cantidad_abr" class="form-control" value="<%= @nineteensale.cantidad_abr %>">
-    <!-- Input for cantidad_abr end -->
   </div>
-  <!-- Label and input for cantidad_abr end -->
 
-  <!-- Label and input for cost_abr start -->
   <div class="form-group">
     <label for="cost_abr">
       Cost abr
     </label>
 
-    <!-- Input for cost_abr start -->
     <input type="text" id="cost_abr" name="cost_abr" class="form-control" value="<%= @nineteensale.cost_abr %>">
-    <!-- Input for cost_abr end -->
   </div>
-  <!-- Label and input for cost_abr end -->
 
-  <!-- Label and input for vta_may start -->
   <div class="form-group">
     <label for="vta_may">
       Vta may
     </label>
 
-    <!-- Input for vta_may start -->
     <input type="text" id="vta_may" name="vta_may" class="form-control" value="<%= @nineteensale.vta_may %>">
-    <!-- Input for vta_may end -->
   </div>
-  <!-- Label and input for vta_may end -->
 
-  <!-- Label and input for cantidad_may start -->
   <div class="form-group">
     <label for="cantidad_may">
       Cantidad may
     </label>
 
-    <!-- Input for cantidad_may start -->
     <input type="text" id="cantidad_may" name="cantidad_may" class="form-control" value="<%= @nineteensale.cantidad_may %>">
-    <!-- Input for cantidad_may end -->
   </div>
-  <!-- Label and input for cantidad_may end -->
 
-  <!-- Label and input for cost_may start -->
   <div class="form-group">
     <label for="cost_may">
       Cost may
     </label>
 
-    <!-- Input for cost_may start -->
     <input type="text" id="cost_may" name="cost_may" class="form-control" value="<%= @nineteensale.cost_may %>">
-    <!-- Input for cost_may end -->
   </div>
-  <!-- Label and input for cost_may end -->
 
-  <!-- Label and input for vta_jun start -->
   <div class="form-group">
     <label for="vta_jun">
       Vta jun
     </label>
 
-    <!-- Input for vta_jun start -->
     <input type="text" id="vta_jun" name="vta_jun" class="form-control" value="<%= @nineteensale.vta_jun %>">
-    <!-- Input for vta_jun end -->
   </div>
-  <!-- Label and input for vta_jun end -->
 
-  <!-- Label and input for cantidad_jun start -->
   <div class="form-group">
     <label for="cantidad_jun">
       Cantidad jun
     </label>
 
-    <!-- Input for cantidad_jun start -->
     <input type="text" id="cantidad_jun" name="cantidad_jun" class="form-control" value="<%= @nineteensale.cantidad_jun %>">
-    <!-- Input for cantidad_jun end -->
   </div>
-  <!-- Label and input for cantidad_jun end -->
 
-  <!-- Label and input for cost_jun start -->
   <div class="form-group">
     <label for="cost_jun">
       Cost jun
     </label>
 
-    <!-- Input for cost_jun start -->
     <input type="text" id="cost_jun" name="cost_jun" class="form-control" value="<%= @nineteensale.cost_jun %>">
-    <!-- Input for cost_jun end -->
   </div>
-  <!-- Label and input for cost_jun end -->
 
-  <!-- Label and input for vta_jul start -->
   <div class="form-group">
     <label for="vta_jul">
       Vta jul
     </label>
 
-    <!-- Input for vta_jul start -->
     <input type="text" id="vta_jul" name="vta_jul" class="form-control" value="<%= @nineteensale.vta_jul %>">
-    <!-- Input for vta_jul end -->
   </div>
-  <!-- Label and input for vta_jul end -->
 
-  <!-- Label and input for cantidad_jul start -->
   <div class="form-group">
     <label for="cantidad_jul">
       Cantidad jul
     </label>
 
-    <!-- Input for cantidad_jul start -->
     <input type="text" id="cantidad_jul" name="cantidad_jul" class="form-control" value="<%= @nineteensale.cantidad_jul %>">
-    <!-- Input for cantidad_jul end -->
   </div>
-  <!-- Label and input for cantidad_jul end -->
 
-  <!-- Label and input for cost_jul start -->
   <div class="form-group">
     <label for="cost_jul">
       Cost jul
     </label>
 
-    <!-- Input for cost_jul start -->
     <input type="text" id="cost_jul" name="cost_jul" class="form-control" value="<%= @nineteensale.cost_jul %>">
-    <!-- Input for cost_jul end -->
   </div>
-  <!-- Label and input for cost_jul end -->
 
-  <!-- Label and input for vta_ago start -->
   <div class="form-group">
     <label for="vta_ago">
       Vta ago
     </label>
 
-    <!-- Input for vta_ago start -->
     <input type="text" id="vta_ago" name="vta_ago" class="form-control" value="<%= @nineteensale.vta_ago %>">
-    <!-- Input for vta_ago end -->
   </div>
-  <!-- Label and input for vta_ago end -->
 
-  <!-- Label and input for cantidad_ago start -->
   <div class="form-group">
     <label for="cantidad_ago">
       Cantidad ago
     </label>
 
-    <!-- Input for cantidad_ago start -->
     <input type="text" id="cantidad_ago" name="cantidad_ago" class="form-control" value="<%= @nineteensale.cantidad_ago %>">
-    <!-- Input for cantidad_ago end -->
   </div>
-  <!-- Label and input for cantidad_ago end -->
 
-  <!-- Label and input for cost_ago start -->
   <div class="form-group">
     <label for="cost_ago">
       Cost ago
     </label>
 
-    <!-- Input for cost_ago start -->
     <input type="text" id="cost_ago" name="cost_ago" class="form-control" value="<%= @nineteensale.cost_ago %>">
-    <!-- Input for cost_ago end -->
   </div>
-  <!-- Label and input for cost_ago end -->
 
-  <!-- Label and input for vta_sep start -->
   <div class="form-group">
     <label for="vta_sep">
       Vta sep
     </label>
 
-    <!-- Input for vta_sep start -->
     <input type="text" id="vta_sep" name="vta_sep" class="form-control" value="<%= @nineteensale.vta_sep %>">
-    <!-- Input for vta_sep end -->
   </div>
-  <!-- Label and input for vta_sep end -->
 
-  <!-- Label and input for cantidad_sep start -->
   <div class="form-group">
     <label for="cantidad_sep">
       Cantidad sep
     </label>
 
-    <!-- Input for cantidad_sep start -->
     <input type="text" id="cantidad_sep" name="cantidad_sep" class="form-control" value="<%= @nineteensale.cantidad_sep %>">
-    <!-- Input for cantidad_sep end -->
   </div>
-  <!-- Label and input for cantidad_sep end -->
 
-  <!-- Label and input for cost_sep start -->
   <div class="form-group">
     <label for="cost_sep">
       Cost sep
     </label>
 
-    <!-- Input for cost_sep start -->
     <input type="text" id="cost_sep" name="cost_sep" class="form-control" value="<%= @nineteensale.cost_sep %>">
-    <!-- Input for cost_sep end -->
   </div>
-  <!-- Label and input for cost_sep end -->
 
-  <!-- Label and input for vta_oct start -->
   <div class="form-group">
     <label for="vta_oct">
       Vta oct
     </label>
 
-    <!-- Input for vta_oct start -->
     <input type="text" id="vta_oct" name="vta_oct" class="form-control" value="<%= @nineteensale.vta_oct %>">
-    <!-- Input for vta_oct end -->
   </div>
-  <!-- Label and input for vta_oct end -->
 
-  <!-- Label and input for cantidad_oct start -->
   <div class="form-group">
     <label for="cantidad_oct">
       Cantidad oct
     </label>
 
-    <!-- Input for cantidad_oct start -->
     <input type="text" id="cantidad_oct" name="cantidad_oct" class="form-control" value="<%= @nineteensale.cantidad_oct %>">
-    <!-- Input for cantidad_oct end -->
   </div>
-  <!-- Label and input for cantidad_oct end -->
 
-  <!-- Label and input for cost_oct start -->
   <div class="form-group">
     <label for="cost_oct">
       Cost oct
     </label>
 
-    <!-- Input for cost_oct start -->
     <input type="text" id="cost_oct" name="cost_oct" class="form-control" value="<%= @nineteensale.cost_oct %>">
-    <!-- Input for cost_oct end -->
   </div>
-  <!-- Label and input for cost_oct end -->
 
-  <!-- Label and input for vta_nov start -->
   <div class="form-group">
     <label for="vta_nov">
       Vta nov
     </label>
 
-    <!-- Input for vta_nov start -->
     <input type="text" id="vta_nov" name="vta_nov" class="form-control" value="<%= @nineteensale.vta_nov %>">
-    <!-- Input for vta_nov end -->
   </div>
-  <!-- Label and input for vta_nov end -->
 
-  <!-- Label and input for cantidad_nov start -->
   <div class="form-group">
     <label for="cantidad_nov">
       Cantidad nov
     </label>
 
-    <!-- Input for cantidad_nov start -->
     <input type="text" id="cantidad_nov" name="cantidad_nov" class="form-control" value="<%= @nineteensale.cantidad_nov %>">
-    <!-- Input for cantidad_nov end -->
   </div>
-  <!-- Label and input for cantidad_nov end -->
 
-  <!-- Label and input for cost_nov start -->
   <div class="form-group">
     <label for="cost_nov">
       Cost nov
     </label>
 
-    <!-- Input for cost_nov start -->
     <input type="text" id="cost_nov" name="cost_nov" class="form-control" value="<%= @nineteensale.cost_nov %>">
-    <!-- Input for cost_nov end -->
   </div>
-  <!-- Label and input for cost_nov end -->
 
-  <!-- Label and input for vta_dic start -->
   <div class="form-group">
     <label for="vta_dic">
       Vta dic
     </label>
 
-    <!-- Input for vta_dic start -->
     <input type="text" id="vta_dic" name="vta_dic" class="form-control" value="<%= @nineteensale.vta_dic %>">
-    <!-- Input for vta_dic end -->
   </div>
-  <!-- Label and input for vta_dic end -->
 
-  <!-- Label and input for cantidad_dic start -->
   <div class="form-group">
     <label for="cantidad_dic">
       Cantidad dic
     </label>
 
-    <!-- Input for cantidad_dic start -->
     <input type="text" id="cantidad_dic" name="cantidad_dic" class="form-control" value="<%= @nineteensale.cantidad_dic %>">
-    <!-- Input for cantidad_dic end -->
   </div>
-  <!-- Label and input for cantidad_dic end -->
 
-  <!-- Label and input for cost_dic start -->
   <div class="form-group">
     <label for="cost_dic">
       Cost dic
     </label>
 
-    <!-- Input for cost_dic start -->
     <input type="text" id="cost_dic" name="cost_dic" class="form-control" value="<%= @nineteensale.cost_dic %>">
-    <!-- Input for cost_dic end -->
   </div>
-  <!-- Label and input for cost_dic end -->
 
-  <!-- Label and input for dia start -->
   <div class="form-group">
     <label for="dia">
       Dia
     </label>
 
-    <!-- Input for dia start -->
     <input type="text" id="dia" name="dia" class="form-control" value="<%= @nineteensale.dia %>">
-    <!-- Input for dia end -->
   </div>
-  <!-- Label and input for dia end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update nineteensale

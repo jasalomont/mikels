@@ -11,80 +11,62 @@
         </a>
       </div>
 
-      <!-- Edit link region start -->
       <div class="col">
         <a href="/regions/<%= @region.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit region
         </a>
       </div>
-      <!-- Edit link region end -->
 
-      <!-- Delete link region start -->
       <div class="col">
         <a href="/delete_region/<%= @region.id %>" class="btn btn-block btn-outline-secondary">
           Delete region
         </a>
       </div>
-      <!-- Delete link region end -->
     </div>
 
     <dl>
       <dt>
         State
       </dt>
-      <!-- Display state start -->
       <dd>
         <%= @region.state %>
       </dd>
-      <!-- Display state end -->
 
       <dt>
         State code
       </dt>
-      <!-- Display state_code start -->
       <dd>
         <%= @region.state_code %>
       </dd>
-      <!-- Display state_code end -->
 
       <dt>
         Statenmbr
       </dt>
-      <!-- Display statenmbr start -->
       <dd>
         <%= @region.statenmbr %>
       </dd>
-      <!-- Display statenmbr end -->
 
       <dt>
         Salsterr
       </dt>
-      <!-- Display salsterr_id start -->
       <dd>
         <%= @region.salsterr_id %>
       </dd>
-      <!-- Display salsterr_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@region.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@region.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

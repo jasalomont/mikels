@@ -11,80 +11,62 @@
         </a>
       </div>
 
-      <!-- Edit link rank start -->
       <div class="col">
         <a href="/ranks/<%= @rank.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit rank
         </a>
       </div>
-      <!-- Edit link rank end -->
 
-      <!-- Delete link rank start -->
       <div class="col">
         <a href="/delete_rank/<%= @rank.id %>" class="btn btn-block btn-outline-secondary">
           Delete rank
         </a>
       </div>
-      <!-- Delete link rank end -->
     </div>
 
     <dl>
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @rank.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Level
       </dt>
-      <!-- Display level start -->
       <dd>
         <%= @rank.level %>
       </dd>
-      <!-- Display level end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @rank.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Department
       </dt>
-      <!-- Display department_id start -->
       <dd>
         <%= @rank.department_id %>
       </dd>
-      <!-- Display department_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@rank.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@rank.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

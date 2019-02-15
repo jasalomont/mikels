@@ -11,71 +11,55 @@
         </a>
       </div>
 
-      <!-- Edit link complaintype start -->
       <div class="col">
         <a href="/complaintypes/<%= @complaintype.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit complaintype
         </a>
       </div>
-      <!-- Edit link complaintype end -->
 
-      <!-- Delete link complaintype start -->
       <div class="col">
         <a href="/delete_complaintype/<%= @complaintype.id %>" class="btn btn-block btn-outline-secondary">
           Delete complaintype
         </a>
       </div>
-      <!-- Delete link complaintype end -->
     </div>
 
     <dl>
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @complaintype.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Code
       </dt>
-      <!-- Display code start -->
       <dd>
         <%= @complaintype.code %>
       </dd>
-      <!-- Display code end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @complaintype.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@complaintype.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@complaintype.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
