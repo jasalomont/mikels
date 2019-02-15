@@ -1,6 +1,7 @@
 class AgreementsController < ApplicationController
   def index
-    @agreements = Agreement.page(params[:page]).per(10)
+    @q = Agreement.ransack(params[:q])
+    @agreements = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("agreement_templates/index.html.erb")
   end

@@ -1,6 +1,7 @@
 class CustomerSegmentsController < ApplicationController
   def index
-    @customer_segments = CustomerSegment.page(params[:page]).per(10)
+    @q = CustomerSegment.ransack(params[:q])
+    @customer_segments = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("customer_segment_templates/index.html.erb")
   end

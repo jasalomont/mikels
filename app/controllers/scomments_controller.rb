@@ -1,6 +1,7 @@
 class ScommentsController < ApplicationController
   def index
-    @scomments = Scomment.page(params[:page]).per(10)
+    @q = Scomment.ransack(params[:q])
+    @scomments = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("scomment_templates/index.html.erb")
   end

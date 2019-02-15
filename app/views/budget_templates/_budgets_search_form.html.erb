@@ -1,0 +1,260 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "budgets_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :year, "Year" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :year_gteq, :class => "form-control", :placeholder => "Year greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :year_lteq, :class => "form-control", :placeholder => "Year less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :agreement_id, "Agreement" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :agreement_id_gteq, :class => "form-control", :placeholder => "Agreement greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :agreement_id_lteq, :class => "form-control", :placeholder => "Agreement less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :total, "Total" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :total_gteq, :class => "form-control", :placeholder => "Total greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :total_lteq, :class => "form-control", :placeholder => "Total less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dic, "Dic" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :dic_gteq, :class => "form-control", :placeholder => "Dic greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :dic_lteq, :class => "form-control", :placeholder => "Dic less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :nov, "Nov" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :nov_gteq, :class => "form-control", :placeholder => "Nov greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :nov_lteq, :class => "form-control", :placeholder => "Nov less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sep, "Sep" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :sep_gteq, :class => "form-control", :placeholder => "Sep greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :sep_lteq, :class => "form-control", :placeholder => "Sep less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :oct, "Oct" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :oct_gteq, :class => "form-control", :placeholder => "Oct greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :oct_lteq, :class => "form-control", :placeholder => "Oct less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :ago, "Ago" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :ago_gteq, :class => "form-control", :placeholder => "Ago greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :ago_lteq, :class => "form-control", :placeholder => "Ago less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :jul, "Jul" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :jul_gteq, :class => "form-control", :placeholder => "Jul greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :jul_lteq, :class => "form-control", :placeholder => "Jul less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :jun, "Jun" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :jun_gteq, :class => "form-control", :placeholder => "Jun greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :jun_lteq, :class => "form-control", :placeholder => "Jun less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :may, "May" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :may_gteq, :class => "form-control", :placeholder => "May greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :may_lteq, :class => "form-control", :placeholder => "May less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :abr, "Abr" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :abr_gteq, :class => "form-control", :placeholder => "Abr greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :abr_lteq, :class => "form-control", :placeholder => "Abr less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :mar, "Mar" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :mar_gteq, :class => "form-control", :placeholder => "Mar greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :mar_lteq, :class => "form-control", :placeholder => "Mar less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :feb, "Feb" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :feb_gteq, :class => "form-control", :placeholder => "Feb greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :feb_lteq, :class => "form-control", :placeholder => "Feb less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :ene, "Ene" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :ene_gteq, :class => "form-control", :placeholder => "Ene greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :ene_lteq, :class => "form-control", :placeholder => "Ene less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sopnumbe_cont, "Sopnumbe contains" %>
+    <%= f.text_field :sopnumbe_cont, :class => "form-control", :placeholder => "Sopnumbe contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :slprsnid_cont, "Slprsnid contains" %>
+    <%= f.text_field :slprsnid_cont, :class => "form-control", :placeholder => "Slprsnid contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gerente_cont, "Gerente contains" %>
+    <%= f.text_field :gerente_cont, :class => "form-control", :placeholder => "Gerente contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :salsterr_cont, "Salsterr contains" %>
+    <%= f.text_field :salsterr_cont, :class => "form-control", :placeholder => "Salsterr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :custnmbr_cont, "Custnmbr contains" %>
+    <%= f.text_field :custnmbr_cont, :class => "form-control", :placeholder => "Custnmbr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/budgets" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#budgets_filters">
+  Show filters
+</a>

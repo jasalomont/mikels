@@ -1,6 +1,7 @@
 class DepartmentsController < ApplicationController
   def index
-    @departments = Department.page(params[:page]).per(10)
+    @q = Department.ransack(params[:q])
+    @departments = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("department_templates/index.html.erb")
   end

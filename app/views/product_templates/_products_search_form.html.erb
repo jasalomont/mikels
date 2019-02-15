@@ -1,0 +1,481 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "products_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :itemnmbr_cont, "Itemnmbr contains" %>
+    <%= f.text_field :itemnmbr_cont, :class => "form-control", :placeholder => "Itemnmbr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :keywords_cont, "Keywords contains" %>
+    <%= f.text_field :keywords_cont, :class => "form-control", :placeholder => "Keywords contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_crosssell3_cont, "Link sku crosssell3 contains" %>
+    <%= f.text_field :link_sku_crosssell3_cont, :class => "form-control", :placeholder => "Link sku crosssell3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_crosssell2_cont, "Link sku crosssell2 contains" %>
+    <%= f.text_field :link_sku_crosssell2_cont, :class => "form-control", :placeholder => "Link sku crosssell2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_crosssell1_cont, "Link sku crosssell1 contains" %>
+    <%= f.text_field :link_sku_crosssell1_cont, :class => "form-control", :placeholder => "Link sku crosssell1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_upsell3_cont, "Link sku upsell3 contains" %>
+    <%= f.text_field :link_sku_upsell3_cont, :class => "form-control", :placeholder => "Link sku upsell3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_upsell2_cont, "Link sku upsell2 contains" %>
+    <%= f.text_field :link_sku_upsell2_cont, :class => "form-control", :placeholder => "Link sku upsell2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_upsell1_cont, "Link sku upsell1 contains" %>
+    <%= f.text_field :link_sku_upsell1_cont, :class => "form-control", :placeholder => "Link sku upsell1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_related3_cont, "Link sku related3 contains" %>
+    <%= f.text_field :link_sku_related3_cont, :class => "form-control", :placeholder => "Link sku related3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_related2_cont, "Link sku related2 contains" %>
+    <%= f.text_field :link_sku_related2_cont, :class => "form-control", :placeholder => "Link sku related2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_sku_related1_cont, "Link sku related1 contains" %>
+    <%= f.text_field :link_sku_related1_cont, :class => "form-control", :placeholder => "Link sku related1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :use3_image_url5_cont, "Use3 image url5 contains" %>
+    <%= f.text_field :use3_image_url5_cont, :class => "form-control", :placeholder => "Use3 image url5 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :use2_image_url5_cont, "Use2 image url5 contains" %>
+    <%= f.text_field :use2_image_url5_cont, :class => "form-control", :placeholder => "Use2 image url5 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :use1_image_url4_cont, "Use1 image url4 contains" %>
+    <%= f.text_field :use1_image_url4_cont, :class => "form-control", :placeholder => "Use1 image url4 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :back_image_url3_cont, "Back image url3 contains" %>
+    <%= f.text_field :back_image_url3_cont, :class => "form-control", :placeholder => "Back image url3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :right_image_url2_cont, "Right image url2 contains" %>
+    <%= f.text_field :right_image_url2_cont, :class => "form-control", :placeholder => "Right image url2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :left_image_url1_cont, "Left image url1 contains" %>
+    <%= f.text_field :left_image_url1_cont, :class => "form-control", :placeholder => "Left image url1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :main_image_url_cont, "Main image url contains" %>
+    <%= f.text_field :main_image_url_cont, :class => "form-control", :placeholder => "Main image url contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :generic_keywords4_cont, "Generic keywords4 contains" %>
+    <%= f.text_field :generic_keywords4_cont, :class => "form-control", :placeholder => "Generic keywords4 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :generic_keywords3_cont, "Generic keywords3 contains" %>
+    <%= f.text_field :generic_keywords3_cont, :class => "form-control", :placeholder => "Generic keywords3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :generic_keywords2_cont, "Generic keywords2 contains" %>
+    <%= f.text_field :generic_keywords2_cont, :class => "form-control", :placeholder => "Generic keywords2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :generic_keywords1_cont, "Generic keywords1 contains" %>
+    <%= f.text_field :generic_keywords1_cont, :class => "form-control", :placeholder => "Generic keywords1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attributes_bullet_point5_cont, "Attributes bullet point5 contains" %>
+    <%= f.text_field :attributes_bullet_point5_cont, :class => "form-control", :placeholder => "Attributes bullet point5 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attributes_bullet_point4_cont, "Attributes bullet point4 contains" %>
+    <%= f.text_field :attributes_bullet_point4_cont, :class => "form-control", :placeholder => "Attributes bullet point4 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attributes_bullet_point3_cont, "Attributes bullet point3 contains" %>
+    <%= f.text_field :attributes_bullet_point3_cont, :class => "form-control", :placeholder => "Attributes bullet point3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attributes_bullet_point2_cont, "Attributes bullet point2 contains" %>
+    <%= f.text_field :attributes_bullet_point2_cont, :class => "form-control", :placeholder => "Attributes bullet point2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attributes_bullet_point1_cont, "Attributes bullet point1 contains" %>
+    <%= f.text_field :attributes_bullet_point1_cont, :class => "form-control", :placeholder => "Attributes bullet point1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :list_price, "List price" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :list_price_gteq, :class => "form-control", :placeholder => "List price greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :list_price_lteq, :class => "form-control", :placeholder => "List price less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :standard_price, "Standard price" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :standard_price_gteq, :class => "form-control", :placeholder => "Standard price greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :standard_price_lteq, :class => "form-control", :placeholder => "Standard price less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :max_order_quantity, "Max order quantity" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :max_order_quantity_gteq, :class => "form-control", :placeholder => "Max order quantity greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :max_order_quantity_lteq, :class => "form-control", :placeholder => "Max order quantity less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_new_date_ends, "Product new date ends" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='product_new_date_endsgteqPicker' data-target-input="nearest">
+          <%= f.text_field :product_new_date_ends_gteq, :class => "form-control datetimepicker-input", :placeholder => "Product new date ends greater than or equal to", :data => {:target => '#product_new_date_endsgteqPicker'} %>
+          <div class="input-group-append" data-target='#product_new_date_endsgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='product_new_date_endslteqPicker' data-target-input="nearest">
+          <%= f.text_field :product_new_date_ends_lteq, :class => "form-control datetimepicker-input", :placeholder => "Product new date ends less than or equal to", :data => {:target => '#product_new_date_endslteqPicker'} %>
+          <div class="input-group-append" data-target='#product_new_date_endslteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#product_new_date_endsgteqPicker').datetimepicker({
+              format: 'MM/DD/YYYY'
+          });
+          $('#product_new_date_endslteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'MM/DD/YYYY'
+          });
+          $('#product_new_date_endsgteqPicker').on("dp.change", function (e) {
+              $('#product_new_date_endslteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#product_new_date_endslteqPicker').on("dp.change", function (e) {
+              $('#product_new_date_endsgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+  <div class="form-group">
+    <%= f.label :product_new_date_start, "Product new date start" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='product_new_date_startgteqPicker' data-target-input="nearest">
+          <%= f.text_field :product_new_date_start_gteq, :class => "form-control datetimepicker-input", :placeholder => "Product new date start greater than or equal to", :data => {:target => '#product_new_date_startgteqPicker'} %>
+          <div class="input-group-append" data-target='#product_new_date_startgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='product_new_date_startlteqPicker' data-target-input="nearest">
+          <%= f.text_field :product_new_date_start_lteq, :class => "form-control datetimepicker-input", :placeholder => "Product new date start less than or equal to", :data => {:target => '#product_new_date_startlteqPicker'} %>
+          <div class="input-group-append" data-target='#product_new_date_startlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#product_new_date_startgteqPicker').datetimepicker({
+              format: 'MM/DD/YYYY'
+          });
+          $('#product_new_date_startlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'MM/DD/YYYY'
+          });
+          $('#product_new_date_startgteqPicker').on("dp.change", function (e) {
+              $('#product_new_date_startlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#product_new_date_startlteqPicker').on("dp.change", function (e) {
+              $('#product_new_date_startgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+  <div class="form-group">
+    <%= f.label :product_distribution_volume, "Product distribution volume" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_distribution_volume_gteq, :class => "form-control", :placeholder => "Product distribution volume greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_distribution_volume_lteq, :class => "form-control", :placeholder => "Product distribution volume less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_volume, "Product volume" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_volume_gteq, :class => "form-control", :placeholder => "Product volume greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_volume_lteq, :class => "form-control", :placeholder => "Product volume less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_height, "Product height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_height_gteq, :class => "form-control", :placeholder => "Product height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_height_lteq, :class => "form-control", :placeholder => "Product height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_length, "Product length" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_length_gteq, :class => "form-control", :placeholder => "Product length greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_length_lteq, :class => "form-control", :placeholder => "Product length less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_width, "Product width" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_width_gteq, :class => "form-control", :placeholder => "Product width greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_width_lteq, :class => "form-control", :placeholder => "Product width less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_weight, "Product weight" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :product_weight_gteq, :class => "form-control", :placeholder => "Product weight greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :product_weight_lteq, :class => "form-control", :placeholder => "Product weight less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_warranty_cont, "Product warranty contains" %>
+    <%= f.text_field :product_warranty_cont, :class => "form-control", :placeholder => "Product warranty contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_includes_cont, "Product includes contains" %>
+    <%= f.text_field :product_includes_cont, :class => "form-control", :placeholder => "Product includes contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :model_cont, "Model contains" %>
+    <%= f.text_field :model_cont, :class => "form-control", :placeholder => "Model contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_short_description_cont, "Product short description contains" %>
+    <%= f.text_field :product_short_description_cont, :class => "form-control", :placeholder => "Product short description contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_description_cont, "Product description contains" %>
+    <%= f.text_field :product_description_cont, :class => "form-control", :placeholder => "Product description contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :subcategory_id, "Subcategory" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :subcategory_id_gteq, :class => "form-control", :placeholder => "Subcategory greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :subcategory_id_lteq, :class => "form-control", :placeholder => "Subcategory less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :productline_id, "Productline" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :productline_id_gteq, :class => "form-control", :placeholder => "Productline greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :productline_id_lteq, :class => "form-control", :placeholder => "Productline less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category_id, "Category" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :category_id_gteq, :class => "form-control", :placeholder => "Category greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :category_id_lteq, :class => "form-control", :placeholder => "Category less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :item_name_cont, "Item name contains" %>
+    <%= f.text_field :item_name_cont, :class => "form-control", :placeholder => "Item name contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :brand_id, "Brand" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :brand_id_gteq, :class => "form-control", :placeholder => "Brand greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :brand_id_lteq, :class => "form-control", :placeholder => "Brand less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :barcode_cont, "Barcode contains" %>
+    <%= f.text_field :barcode_cont, :class => "form-control", :placeholder => "Barcode contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :item_sku_nuevo_cont, "Item sku nuevo contains" %>
+    <%= f.text_field :item_sku_nuevo_cont, :class => "form-control", :placeholder => "Item sku nuevo contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sku_parent_related_cont, "Sku parent related contains" %>
+    <%= f.text_field :sku_parent_related_cont, :class => "form-control", :placeholder => "Sku parent related contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :relationship_type_cont, "Relationship type contains" %>
+    <%= f.text_field :relationship_type_cont, :class => "form-control", :placeholder => "Relationship type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :parent_sku_cont, "Parent sku contains" %>
+    <%= f.text_field :parent_sku_cont, :class => "form-control", :placeholder => "Parent sku contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/products" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#products_filters">
+  Show filters
+</a>

@@ -1,6 +1,7 @@
 class SalsterrsController < ApplicationController
   def index
-    @salsterrs = Salsterr.page(params[:page]).per(10)
+    @q = Salsterr.ransack(params[:q])
+    @salsterrs = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("salsterr_templates/index.html.erb")
   end

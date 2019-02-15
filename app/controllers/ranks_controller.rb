@@ -1,6 +1,7 @@
 class RanksController < ApplicationController
   def index
-    @ranks = Rank.page(params[:page]).per(10)
+    @q = Rank.ransack(params[:q])
+    @ranks = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("rank_templates/index.html.erb")
   end

@@ -1,0 +1,565 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "nineteensales_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :custnmbr_cont, "Custnmbr contains" %>
+    <%= f.text_field :custnmbr_cont, :class => "form-control", :placeholder => "Custnmbr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dia, "Dia" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :dia_gteq, :class => "form-control", :placeholder => "Dia greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :dia_lteq, :class => "form-control", :placeholder => "Dia less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_dic, "Cost dic" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_dic_gteq, :class => "form-control", :placeholder => "Cost dic greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_dic_lteq, :class => "form-control", :placeholder => "Cost dic less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_dic, "Cantidad dic" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_dic_gteq, :class => "form-control", :placeholder => "Cantidad dic greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_dic_lteq, :class => "form-control", :placeholder => "Cantidad dic less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_dic, "Vta dic" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_dic_gteq, :class => "form-control", :placeholder => "Vta dic greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_dic_lteq, :class => "form-control", :placeholder => "Vta dic less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_nov, "Cost nov" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_nov_gteq, :class => "form-control", :placeholder => "Cost nov greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_nov_lteq, :class => "form-control", :placeholder => "Cost nov less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_nov, "Cantidad nov" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_nov_gteq, :class => "form-control", :placeholder => "Cantidad nov greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_nov_lteq, :class => "form-control", :placeholder => "Cantidad nov less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_nov, "Vta nov" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_nov_gteq, :class => "form-control", :placeholder => "Vta nov greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_nov_lteq, :class => "form-control", :placeholder => "Vta nov less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_oct, "Cost oct" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_oct_gteq, :class => "form-control", :placeholder => "Cost oct greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_oct_lteq, :class => "form-control", :placeholder => "Cost oct less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_oct, "Cantidad oct" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_oct_gteq, :class => "form-control", :placeholder => "Cantidad oct greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_oct_lteq, :class => "form-control", :placeholder => "Cantidad oct less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_oct, "Vta oct" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_oct_gteq, :class => "form-control", :placeholder => "Vta oct greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_oct_lteq, :class => "form-control", :placeholder => "Vta oct less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_sep, "Cost sep" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_sep_gteq, :class => "form-control", :placeholder => "Cost sep greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_sep_lteq, :class => "form-control", :placeholder => "Cost sep less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_sep, "Cantidad sep" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_sep_gteq, :class => "form-control", :placeholder => "Cantidad sep greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_sep_lteq, :class => "form-control", :placeholder => "Cantidad sep less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_sep, "Vta sep" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_sep_gteq, :class => "form-control", :placeholder => "Vta sep greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_sep_lteq, :class => "form-control", :placeholder => "Vta sep less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_ago, "Cost ago" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_ago_gteq, :class => "form-control", :placeholder => "Cost ago greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_ago_lteq, :class => "form-control", :placeholder => "Cost ago less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_ago, "Cantidad ago" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_ago_gteq, :class => "form-control", :placeholder => "Cantidad ago greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_ago_lteq, :class => "form-control", :placeholder => "Cantidad ago less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_ago, "Vta ago" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_ago_gteq, :class => "form-control", :placeholder => "Vta ago greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_ago_lteq, :class => "form-control", :placeholder => "Vta ago less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_jul, "Cost jul" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_jul_gteq, :class => "form-control", :placeholder => "Cost jul greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_jul_lteq, :class => "form-control", :placeholder => "Cost jul less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_jul, "Cantidad jul" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_jul_gteq, :class => "form-control", :placeholder => "Cantidad jul greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_jul_lteq, :class => "form-control", :placeholder => "Cantidad jul less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_jul, "Vta jul" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_jul_gteq, :class => "form-control", :placeholder => "Vta jul greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_jul_lteq, :class => "form-control", :placeholder => "Vta jul less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_jun, "Cost jun" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_jun_gteq, :class => "form-control", :placeholder => "Cost jun greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_jun_lteq, :class => "form-control", :placeholder => "Cost jun less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_jun, "Cantidad jun" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_jun_gteq, :class => "form-control", :placeholder => "Cantidad jun greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_jun_lteq, :class => "form-control", :placeholder => "Cantidad jun less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_jun, "Vta jun" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_jun_gteq, :class => "form-control", :placeholder => "Vta jun greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_jun_lteq, :class => "form-control", :placeholder => "Vta jun less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_may, "Cost may" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_may_gteq, :class => "form-control", :placeholder => "Cost may greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_may_lteq, :class => "form-control", :placeholder => "Cost may less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_may, "Cantidad may" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_may_gteq, :class => "form-control", :placeholder => "Cantidad may greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_may_lteq, :class => "form-control", :placeholder => "Cantidad may less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_may, "Vta may" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_may_gteq, :class => "form-control", :placeholder => "Vta may greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_may_lteq, :class => "form-control", :placeholder => "Vta may less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_abr, "Cost abr" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_abr_gteq, :class => "form-control", :placeholder => "Cost abr greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_abr_lteq, :class => "form-control", :placeholder => "Cost abr less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_abr, "Cantidad abr" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_abr_gteq, :class => "form-control", :placeholder => "Cantidad abr greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_abr_lteq, :class => "form-control", :placeholder => "Cantidad abr less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_abr, "Vta abr" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_abr_gteq, :class => "form-control", :placeholder => "Vta abr greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_abr_lteq, :class => "form-control", :placeholder => "Vta abr less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_mar, "Cost mar" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_mar_gteq, :class => "form-control", :placeholder => "Cost mar greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_mar_lteq, :class => "form-control", :placeholder => "Cost mar less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_mar, "Cantidad mar" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_mar_gteq, :class => "form-control", :placeholder => "Cantidad mar greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_mar_lteq, :class => "form-control", :placeholder => "Cantidad mar less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_mar, "Vta mar" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_mar_gteq, :class => "form-control", :placeholder => "Vta mar greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_mar_lteq, :class => "form-control", :placeholder => "Vta mar less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_feb, "Cost feb" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_feb_gteq, :class => "form-control", :placeholder => "Cost feb greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_feb_lteq, :class => "form-control", :placeholder => "Cost feb less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_feb, "Cantidad feb" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_feb_gteq, :class => "form-control", :placeholder => "Cantidad feb greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_feb_lteq, :class => "form-control", :placeholder => "Cantidad feb less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_feb, "Vta feb" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_feb_gteq, :class => "form-control", :placeholder => "Vta feb greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_feb_lteq, :class => "form-control", :placeholder => "Vta feb less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost_ene, "Cost ene" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_ene_gteq, :class => "form-control", :placeholder => "Cost ene greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_ene_lteq, :class => "form-control", :placeholder => "Cost ene less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad_ene, "Cantidad ene" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_ene_gteq, :class => "form-control", :placeholder => "Cantidad ene greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_ene_lteq, :class => "form-control", :placeholder => "Cantidad ene less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta_ene, "Vta ene" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_ene_gteq, :class => "form-control", :placeholder => "Vta ene greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_ene_lteq, :class => "form-control", :placeholder => "Vta ene less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cost, "Cost" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cost_gteq, :class => "form-control", :placeholder => "Cost greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cost_lteq, :class => "form-control", :placeholder => "Cost less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cantidad, "Cantidad" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :cantidad_gteq, :class => "form-control", :placeholder => "Cantidad greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :cantidad_lteq, :class => "form-control", :placeholder => "Cantidad less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vta, "Vta" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :vta_gteq, :class => "form-control", :placeholder => "Vta greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :vta_lteq, :class => "form-control", :placeholder => "Vta less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :itemnmbr_cont, "Itemnmbr contains" %>
+    <%= f.text_field :itemnmbr_cont, :class => "form-control", :placeholder => "Itemnmbr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sopnumbe_cont, "Sopnumbe contains" %>
+    <%= f.text_field :sopnumbe_cont, :class => "form-control", :placeholder => "Sopnumbe contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gerente_cont, "Gerente contains" %>
+    <%= f.text_field :gerente_cont, :class => "form-control", :placeholder => "Gerente contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :slprsnid_cont, "Slprsnid contains" %>
+    <%= f.text_field :slprsnid_cont, :class => "form-control", :placeholder => "Slprsnid contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :salsterr_cont, "Salsterr contains" %>
+    <%= f.text_field :salsterr_cont, :class => "form-control", :placeholder => "Salsterr contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/nineteensales" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#nineteensales_filters">
+  Show filters
+</a>

@@ -1,6 +1,7 @@
 class ComplainsController < ApplicationController
   def index
-    @complains = Complain.page(params[:page]).per(10)
+    @q = Complain.ransack(params[:q])
+    @complains = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("complain_templates/index.html.erb")
   end

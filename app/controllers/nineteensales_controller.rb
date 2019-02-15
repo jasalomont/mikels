@@ -1,6 +1,7 @@
 class NineteensalesController < ApplicationController
   def index
-    @nineteensales = Nineteensale.page(params[:page]).per(10)
+    @q = Nineteensale.ransack(params[:q])
+    @nineteensales = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("nineteensale_templates/index.html.erb")
   end

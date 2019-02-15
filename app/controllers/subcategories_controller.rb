@@ -1,6 +1,7 @@
 class SubcategoriesController < ApplicationController
   def index
-    @subcategories = Subcategory.page(params[:page]).per(10)
+    @q = Subcategory.ransack(params[:q])
+    @subcategories = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("subcategory_templates/index.html.erb")
   end

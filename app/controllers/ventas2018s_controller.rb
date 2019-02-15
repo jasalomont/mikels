@@ -1,6 +1,7 @@
 class Ventas2018sController < ApplicationController
   def index
-    @ventas2018s = Ventas2018.page(params[:page]).per(10)
+    @q = Ventas2018.ransack(params[:q])
+    @ventas2018s = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("ventas2018_templates/index.html.erb")
   end
