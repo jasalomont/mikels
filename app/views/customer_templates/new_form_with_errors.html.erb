@@ -1,0 +1,68 @@
+<!-- Validation failure messages -->
+<% if @customer.present? %>
+  <% if @customer.errors.any? %>
+    <% @customer.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new customer
+</h1>
+
+
+<hr>
+
+<!-- Form customer start -->
+<form action="/create_customer" method="post">
+<!-- Form customer end -->
+
+  <!-- Label and input for custnmbr start -->
+  <div class="form-group">
+    <label for="custnmbr">
+      Custnmbr
+    </label>
+
+    <!-- Input for custnmbr start -->
+    <input type="text" id="custnmbr" name="custnmbr" class="form-control" value="<%= @customer.custnmbr %>">
+    <!-- Input for custnmbr end -->
+  </div>
+  <!-- Label and input for custnmbr end -->
+
+  <!-- Label and input for custname start -->
+  <div class="form-group">
+    <label for="custname">
+      Custname
+    </label>
+
+    <!-- Input for custname start -->
+    <input type="text" id="custname" name="custname" class="form-control" value="<%= @customer.custname %>">
+    <!-- Input for custname end -->
+  </div>
+  <!-- Label and input for custname end -->
+
+  <!-- Label and input for customer_segment_id start -->
+  <div class="form-group">
+    <label for="customer_segment_id">
+      Customer segment
+    </label>
+
+    <!-- Input for customer_segment_id start -->
+    <input type="text" id="customer_segment_id" name="customer_segment_id" class="form-control" value="<%= @customer.customer_segment_id %>">
+    <!-- Input for customer_segment_id end -->
+  </div>
+  <!-- Label and input for customer_segment_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create customer
+  </button>
+</form>
+
+<hr>
+
+<a href="/customers">
+  Go back
+</a>

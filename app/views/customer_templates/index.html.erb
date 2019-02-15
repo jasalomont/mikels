@@ -1,0 +1,102 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All customers
+    </h1>
+
+    <a href="/customers/new" class="btn btn-block btn-outline-secondary">
+      Add a new customer
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Custnmbr
+        </th>
+
+        <th>
+          Custname
+        </th>
+
+        <th>
+          Customer segment
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @customers.each do |customer| %>
+      <tr>
+        <!-- Display customer.id start -->
+        <td>
+          <%= customer.id %>
+        </td>
+        <!-- Display customer.id end -->
+
+        <!-- Display customer.custnmbr start -->
+        <td>
+          <%= customer.custnmbr %>
+        </td>
+        <!-- Display customer.custnmbr end -->
+
+        <!-- Display customer.custname start -->
+        <td>
+          <%= customer.custname %>
+        </td>
+        <!-- Display customer.custname end -->
+
+        <!-- Display customer.customer_segment_id start -->
+        <td>
+          <%= customer.customer_segment_id %>
+        </td>
+        <!-- Display customer.customer_segment_id end -->
+
+        <!-- Display customer.created_at start -->
+        <td>
+          <%= time_ago_in_words(customer.created_at) %> ago
+        </td>
+        <!-- Display customer.created_at end -->
+
+        <!-- Display customer.updated_at start -->
+        <td>
+          <%= time_ago_in_words(customer.updated_at) %> ago
+        </td>
+        <!-- Display customer.updated_at end -->
+
+        <td>
+          <a href="/customers/<%= customer.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
