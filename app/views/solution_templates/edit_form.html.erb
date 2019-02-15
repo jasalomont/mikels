@@ -1,0 +1,102 @@
+<h1>
+  Edit solution #<%= @solution.id %>
+</h1>
+
+<hr>
+
+<!-- Form solution start -->
+<form action="/update_solution/<%= @solution.id %>" method="post">
+<!-- Form solution end -->
+
+  <!-- Label and input for complain_id start -->
+  <div class="form-group">
+    <label for="complain_id">
+      Complain
+    </label>
+
+    <!-- Input for complain_id start -->
+    <input type="text" id="complain_id" name="complain_id" class="form-control" value="<%= @solution.complain_id %>">
+    <!-- Input for complain_id end -->
+  </div>
+  <!-- Label and input for complain_id end -->
+
+  <!-- Label and input for message start -->
+  <div class="form-group">
+    <label for="message">
+      Message
+    </label>
+
+    <!-- Input for message start -->
+    <textarea id="message" name="message" class="form-control" rows="3"><%= @solution.message %></textarea>
+    <!-- Input for message end -->
+  </div>
+  <!-- Label and input for message end -->
+
+  <!-- Label and input for close start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="close">
+    <!-- Input for close start -->
+    <input id="close" class="form-check-input" name="close" type="checkbox" value="1" <%= "checked" if @solution.close %>>
+    <!-- Input for close end -->
+    <label for="close" class="form-check-label">
+      Close
+    </label>
+  </div>
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @solution.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for like start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="like">
+    <!-- Input for like start -->
+    <input id="like" class="form-check-input" name="like" type="checkbox" value="1" <%= "checked" if @solution.like %>>
+    <!-- Input for like end -->
+    <label for="like" class="form-check-label">
+      Like
+    </label>
+  </div>
+
+  <!-- Label and input for scomment_id start -->
+  <div class="form-group">
+    <label for="scomment_id">
+      Scomment
+    </label>
+
+    <!-- Input for scomment_id start -->
+    <input type="text" id="scomment_id" name="scomment_id" class="form-control" value="<%= @solution.scomment_id %>">
+    <!-- Input for scomment_id end -->
+  </div>
+  <!-- Label and input for scomment_id end -->
+
+  <!-- Label and input for title start -->
+  <div class="form-group">
+    <label for="title">
+      Title
+    </label>
+
+    <!-- Input for title start -->
+    <input type="text" id="title" name="title" class="form-control" value="<%= @solution.title %>">
+    <!-- Input for title end -->
+  </div>
+  <!-- Label and input for title end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update solution
+  </button>
+</form>
+
+<hr>
+
+<a href="/solutions">
+  Go back
+</a>
