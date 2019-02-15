@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Ventas2018 resource:
+
+  # CREATE
+  get("/ventas2018s/new", { :controller => "ventas2018s", :action => "new_form" })
+  post("/create_ventas2018", { :controller => "ventas2018s", :action => "create_row" })
+
+  # READ
+  get("/ventas2018s", { :controller => "ventas2018s", :action => "index" })
+  get("/ventas2018s/:id_to_display", { :controller => "ventas2018s", :action => "show" })
+
+  # UPDATE
+  get("/ventas2018s/:prefill_with_id/edit", { :controller => "ventas2018s", :action => "edit_form" })
+  post("/update_ventas2018/:id_to_modify", { :controller => "ventas2018s", :action => "update_row" })
+
+  # DELETE
+  get("/delete_ventas2018/:id_to_remove", { :controller => "ventas2018s", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Region resource:
 
   # CREATE
