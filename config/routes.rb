@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Scomment resource:
+
+  # CREATE
+  get("/scomments/new", { :controller => "scomments", :action => "new_form" })
+  post("/create_scomment", { :controller => "scomments", :action => "create_row" })
+
+  # READ
+  get("/scomments", { :controller => "scomments", :action => "index" })
+  get("/scomments/:id_to_display", { :controller => "scomments", :action => "show" })
+
+  # UPDATE
+  get("/scomments/:prefill_with_id/edit", { :controller => "scomments", :action => "edit_form" })
+  post("/update_scomment/:id_to_modify", { :controller => "scomments", :action => "update_row" })
+
+  # DELETE
+  get("/delete_scomment/:id_to_remove", { :controller => "scomments", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Productline resource:
 
   # CREATE
