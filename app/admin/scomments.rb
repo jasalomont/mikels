@@ -1,4 +1,6 @@
 ActiveAdmin.register Scomment do
+
+ permit_params :user_id, :solution_id, :message
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
