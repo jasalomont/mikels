@@ -1,4 +1,6 @@
 ActiveAdmin.register Agreement do
+
+ permit_params :custnmbr, :timespan, :start, :end, :amount_level1, :category, :pcnt_level1, :pcnt_level2, :pcnt_level3, :amount_level2, :amount_level3
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
