@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Department #<%= @department.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/departments" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link department start -->
+      <div class="col">
+        <a href="/departments/<%= @department.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit department
+        </a>
+      </div>
+      <!-- Edit link department end -->
+
+      <!-- Delete link department start -->
+      <div class="col">
+        <a href="/delete_department/<%= @department.id %>" class="btn btn-block btn-outline-secondary">
+          Delete department
+        </a>
+      </div>
+      <!-- Delete link department end -->
+    </div>
+
+    <dl>
+      <dt>
+        Code
+      </dt>
+      <!-- Display code start -->
+      <dd>
+        <%= @department.code %>
+      </dd>
+      <!-- Display code end -->
+
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @department.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@department.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@department.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

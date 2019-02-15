@@ -1,0 +1,45 @@
+<h1>
+  Add a new department
+</h1>
+
+
+<hr>
+
+<!-- Form department start -->
+<form action="/create_department" method="post">
+<!-- Form department end -->
+
+  <!-- Label and input for code start -->
+  <div class="form-group">
+    <label for="code">
+      Code
+    </label>
+
+    <!-- Input for code start -->
+    <input type="text" id="code" name="code" class="form-control">
+    <!-- Input for code end -->
+  </div>
+  <!-- Label and input for code end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create department
+  </button>
+</form>
+
+<hr>
+
+<a href="/departments">
+  Go back
+</a>
