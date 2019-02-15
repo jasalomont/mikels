@@ -1,0 +1,8 @@
+class CustomerSegment < ApplicationRecord
+  # Direct associations
+
+  # Indirect associations
+
+  # Validations
+
+end

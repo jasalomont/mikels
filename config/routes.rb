@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Customer segment resource:
+
+  # CREATE
+  get("/customer_segments/new", { :controller => "customer_segments", :action => "new_form" })
+  post("/create_customer_segment", { :controller => "customer_segments", :action => "create_row" })
+
+  # READ
+  get("/customer_segments", { :controller => "customer_segments", :action => "index" })
+  get("/customer_segments/:id_to_display", { :controller => "customer_segments", :action => "show" })
+
+  # UPDATE
+  get("/customer_segments/:prefill_with_id/edit", { :controller => "customer_segments", :action => "edit_form" })
+  post("/update_customer_segment/:id_to_modify", { :controller => "customer_segments", :action => "update_row" })
+
+  # DELETE
+  get("/delete_customer_segment/:id_to_remove", { :controller => "customer_segments", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Customer resource:
 
   # CREATE

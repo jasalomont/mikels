@@ -1,0 +1,56 @@
+<h1>
+  Edit customer segment #<%= @customer_segment.id %>
+</h1>
+
+<hr>
+
+<!-- Form customer_segment start -->
+<form action="/update_customer_segment/<%= @customer_segment.id %>" method="post">
+<!-- Form customer_segment end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @customer_segment.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for code start -->
+  <div class="form-group">
+    <label for="code">
+      Code
+    </label>
+
+    <!-- Input for code start -->
+    <input type="text" id="code" name="code" class="form-control" value="<%= @customer_segment.code %>">
+    <!-- Input for code end -->
+  </div>
+  <!-- Label and input for code end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <input type="text" id="description" name="description" class="form-control" value="<%= @customer_segment.description %>">
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update customer segment
+  </button>
+</form>
+
+<hr>
+
+<a href="/customer_segments">
+  Go back
+</a>
