@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Agreement resource:
+
+  # CREATE
+  get("/agreements/new", { :controller => "agreements", :action => "new_form" })
+  post("/create_agreement", { :controller => "agreements", :action => "create_row" })
+
+  # READ
+  get("/agreements", { :controller => "agreements", :action => "index" })
+  get("/agreements/:id_to_display", { :controller => "agreements", :action => "show" })
+
+  # UPDATE
+  get("/agreements/:prefill_with_id/edit", { :controller => "agreements", :action => "edit_form" })
+  post("/update_agreement/:id_to_modify", { :controller => "agreements", :action => "update_row" })
+
+  # DELETE
+  get("/delete_agreement/:id_to_remove", { :controller => "agreements", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Scomment resource:
 
   # CREATE

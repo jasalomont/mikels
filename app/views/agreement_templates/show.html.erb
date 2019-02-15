@@ -1,0 +1,154 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Agreement #<%= @agreement.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/agreements" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link agreement start -->
+      <div class="col">
+        <a href="/agreements/<%= @agreement.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit agreement
+        </a>
+      </div>
+      <!-- Edit link agreement end -->
+
+      <!-- Delete link agreement start -->
+      <div class="col">
+        <a href="/delete_agreement/<%= @agreement.id %>" class="btn btn-block btn-outline-secondary">
+          Delete agreement
+        </a>
+      </div>
+      <!-- Delete link agreement end -->
+    </div>
+
+    <dl>
+      <dt>
+        Custnmbr
+      </dt>
+      <!-- Display custnmbr start -->
+      <dd>
+        <%= @agreement.custnmbr %>
+      </dd>
+      <!-- Display custnmbr end -->
+
+      <dt>
+        Timespan
+      </dt>
+      <!-- Display timespan start -->
+      <dd>
+        <%= @agreement.timespan %>
+      </dd>
+      <!-- Display timespan end -->
+
+      <dt>
+        Start
+      </dt>
+      <!-- Display start start -->
+      <dd>
+        <%= @agreement.start %>
+      </dd>
+      <!-- Display start end -->
+
+      <dt>
+        End
+      </dt>
+      <!-- Display end start -->
+      <dd>
+        <%= @agreement.end %>
+      </dd>
+      <!-- Display end end -->
+
+      <dt>
+        Amount level1
+      </dt>
+      <!-- Display amount_level1 start -->
+      <dd>
+        <%= @agreement.amount_level1 %>
+      </dd>
+      <!-- Display amount_level1 end -->
+
+      <dt>
+        Category
+      </dt>
+      <!-- Display category start -->
+      <dd>
+        <%= @agreement.category %>
+      </dd>
+      <!-- Display category end -->
+
+      <dt>
+        Pcnt level1
+      </dt>
+      <!-- Display pcnt_level1 start -->
+      <dd>
+        <%= @agreement.pcnt_level1 %>
+      </dd>
+      <!-- Display pcnt_level1 end -->
+
+      <dt>
+        Pcnt level2
+      </dt>
+      <!-- Display pcnt_level2 start -->
+      <dd>
+        <%= @agreement.pcnt_level2 %>
+      </dd>
+      <!-- Display pcnt_level2 end -->
+
+      <dt>
+        Pcnt level3
+      </dt>
+      <!-- Display pcnt_level3 start -->
+      <dd>
+        <%= @agreement.pcnt_level3 %>
+      </dd>
+      <!-- Display pcnt_level3 end -->
+
+      <dt>
+        Amount level2
+      </dt>
+      <!-- Display amount_level2 start -->
+      <dd>
+        <%= @agreement.amount_level2 %>
+      </dd>
+      <!-- Display amount_level2 end -->
+
+      <dt>
+        Amount level3
+      </dt>
+      <!-- Display amount_level3 start -->
+      <dd>
+        <%= @agreement.amount_level3 %>
+      </dd>
+      <!-- Display amount_level3 end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@agreement.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@agreement.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

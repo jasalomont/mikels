@@ -1,0 +1,182 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All agreements
+    </h1>
+
+    <a href="/agreements/new" class="btn btn-block btn-outline-secondary">
+      Add a new agreement
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Custnmbr
+        </th>
+
+        <th>
+          Timespan
+        </th>
+
+        <th>
+          Start
+        </th>
+
+        <th>
+          End
+        </th>
+
+        <th>
+          Amount level1
+        </th>
+
+        <th>
+          Category
+        </th>
+
+        <th>
+          Pcnt level1
+        </th>
+
+        <th>
+          Pcnt level2
+        </th>
+
+        <th>
+          Pcnt level3
+        </th>
+
+        <th>
+          Amount level2
+        </th>
+
+        <th>
+          Amount level3
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @agreements.each do |agreement| %>
+      <tr>
+        <!-- Display agreement.id start -->
+        <td>
+          <%= agreement.id %>
+        </td>
+        <!-- Display agreement.id end -->
+
+        <!-- Display agreement.custnmbr start -->
+        <td>
+          <%= agreement.custnmbr %>
+        </td>
+        <!-- Display agreement.custnmbr end -->
+
+        <!-- Display agreement.timespan start -->
+        <td>
+          <%= agreement.timespan %>
+        </td>
+        <!-- Display agreement.timespan end -->
+
+        <!-- Display agreement.start start -->
+        <td>
+          <%= agreement.start %>
+        </td>
+        <!-- Display agreement.start end -->
+
+        <!-- Display agreement.end start -->
+        <td>
+          <%= agreement.end %>
+        </td>
+        <!-- Display agreement.end end -->
+
+        <!-- Display agreement.amount_level1 start -->
+        <td>
+          <%= agreement.amount_level1 %>
+        </td>
+        <!-- Display agreement.amount_level1 end -->
+
+        <!-- Display agreement.category start -->
+        <td>
+          <%= agreement.category %>
+        </td>
+        <!-- Display agreement.category end -->
+
+        <!-- Display agreement.pcnt_level1 start -->
+        <td>
+          <%= agreement.pcnt_level1 %>
+        </td>
+        <!-- Display agreement.pcnt_level1 end -->
+
+        <!-- Display agreement.pcnt_level2 start -->
+        <td>
+          <%= agreement.pcnt_level2 %>
+        </td>
+        <!-- Display agreement.pcnt_level2 end -->
+
+        <!-- Display agreement.pcnt_level3 start -->
+        <td>
+          <%= agreement.pcnt_level3 %>
+        </td>
+        <!-- Display agreement.pcnt_level3 end -->
+
+        <!-- Display agreement.amount_level2 start -->
+        <td>
+          <%= agreement.amount_level2 %>
+        </td>
+        <!-- Display agreement.amount_level2 end -->
+
+        <!-- Display agreement.amount_level3 start -->
+        <td>
+          <%= agreement.amount_level3 %>
+        </td>
+        <!-- Display agreement.amount_level3 end -->
+
+        <!-- Display agreement.created_at start -->
+        <td>
+          <%= time_ago_in_words(agreement.created_at) %> ago
+        </td>
+        <!-- Display agreement.created_at end -->
+
+        <!-- Display agreement.updated_at start -->
+        <td>
+          <%= time_ago_in_words(agreement.updated_at) %> ago
+        </td>
+        <!-- Display agreement.updated_at end -->
+
+        <td>
+          <a href="/agreements/<%= agreement.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
