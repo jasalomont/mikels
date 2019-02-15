@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Subcategory resource:
+
+  # CREATE
+  get("/subcategories/new", { :controller => "subcategories", :action => "new_form" })
+  post("/create_subcategory", { :controller => "subcategories", :action => "create_row" })
+
+  # READ
+  get("/subcategories", { :controller => "subcategories", :action => "index" })
+  get("/subcategories/:id_to_display", { :controller => "subcategories", :action => "show" })
+
+  # UPDATE
+  get("/subcategories/:prefill_with_id/edit", { :controller => "subcategories", :action => "edit_form" })
+  post("/update_subcategory/:id_to_modify", { :controller => "subcategories", :action => "update_row" })
+
+  # DELETE
+  get("/delete_subcategory/:id_to_remove", { :controller => "subcategories", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Category resource:
 
   # CREATE

@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Subcategory #<%= @subcategory.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/subcategories" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link subcategory start -->
+      <div class="col">
+        <a href="/subcategories/<%= @subcategory.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit subcategory
+        </a>
+      </div>
+      <!-- Edit link subcategory end -->
+
+      <!-- Delete link subcategory start -->
+      <div class="col">
+        <a href="/delete_subcategory/<%= @subcategory.id %>" class="btn btn-block btn-outline-secondary">
+          Delete subcategory
+        </a>
+      </div>
+      <!-- Delete link subcategory end -->
+    </div>
+
+    <dl>
+      <dt>
+        Category
+      </dt>
+      <!-- Display category_id start -->
+      <dd>
+        <%= @subcategory.category_id %>
+      </dd>
+      <!-- Display category_id end -->
+
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @subcategory.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @subcategory.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@subcategory.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@subcategory.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
