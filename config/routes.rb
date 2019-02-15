@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Nineteensale resource:
+
+  # CREATE
+  get("/nineteensales/new", { :controller => "nineteensales", :action => "new_form" })
+  post("/create_nineteensale", { :controller => "nineteensales", :action => "create_row" })
+
+  # READ
+  get("/nineteensales", { :controller => "nineteensales", :action => "index" })
+  get("/nineteensales/:id_to_display", { :controller => "nineteensales", :action => "show" })
+
+  # UPDATE
+  get("/nineteensales/:prefill_with_id/edit", { :controller => "nineteensales", :action => "edit_form" })
+  post("/update_nineteensale/:id_to_modify", { :controller => "nineteensales", :action => "update_row" })
+
+  # DELETE
+  get("/delete_nineteensale/:id_to_remove", { :controller => "nineteensales", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Ventas2018 resource:
 
   # CREATE
