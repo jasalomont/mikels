@@ -1,4 +1,6 @@
 ActiveAdmin.register Complain do
+
+ permit_params :user_id, :complaintype_id, :solved, :description, :department_id, :itemnmbr, :sopnumbe, :profile_id, :rating, :status, :title
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
