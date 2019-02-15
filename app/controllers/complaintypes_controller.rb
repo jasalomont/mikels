@@ -1,6 +1,6 @@
 class ComplaintypesController < ApplicationController
   def index
-    @complaintypes = Complaintype.all
+    @complaintypes = Complaintype.page(params[:page]).per(10)
 
     render("complaintype_templates/index.html.erb")
   end

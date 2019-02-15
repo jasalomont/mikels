@@ -1,6 +1,6 @@
 class SubcategoriesController < ApplicationController
   def index
-    @subcategories = Subcategory.all
+    @subcategories = Subcategory.page(params[:page]).per(10)
 
     render("subcategory_templates/index.html.erb")
   end

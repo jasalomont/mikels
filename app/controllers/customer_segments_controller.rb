@@ -1,6 +1,6 @@
 class CustomerSegmentsController < ApplicationController
   def index
-    @customer_segments = CustomerSegment.all
+    @customer_segments = CustomerSegment.page(params[:page]).per(10)
 
     render("customer_segment_templates/index.html.erb")
   end

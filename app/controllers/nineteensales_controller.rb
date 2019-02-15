@@ -1,6 +1,6 @@
 class NineteensalesController < ApplicationController
   def index
-    @nineteensales = Nineteensale.all
+    @nineteensales = Nineteensale.page(params[:page]).per(10)
 
     render("nineteensale_templates/index.html.erb")
   end

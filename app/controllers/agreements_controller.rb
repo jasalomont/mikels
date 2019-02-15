@@ -1,6 +1,6 @@
 class AgreementsController < ApplicationController
   def index
-    @agreements = Agreement.all
+    @agreements = Agreement.page(params[:page]).per(10)
 
     render("agreement_templates/index.html.erb")
   end

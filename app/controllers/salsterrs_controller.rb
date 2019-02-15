@@ -1,6 +1,6 @@
 class SalsterrsController < ApplicationController
   def index
-    @salsterrs = Salsterr.all
+    @salsterrs = Salsterr.page(params[:page]).per(10)
 
     render("salsterr_templates/index.html.erb")
   end
