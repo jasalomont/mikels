@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark mb-4">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      Mikels
+    <a class="navbar-brand" href="/" >
+      <font color="#D7DBDD" style="font-weight:bold">
+      MIKEL'S
+      </font>
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-nav-links" aria-controls="collapsible-nav-links" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,9 +12,9 @@
 
     <div class="collapse navbar-collapse" id="collapsible-nav-links">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Resources
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#D7DBDD">
+            Recursos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a href="/customer_segments" class="dropdown-item">
@@ -84,26 +86,26 @@
       <ul class="navbar-nav">
         <% if current_user.blank? %>
           <li class="nav-item">
-            <a href="/users/sign_in" class="nav-link">
-              Sign in
+            <a href="/users/sign_in" class="nav-link" style="color:#D7DBDD">
+              Iniciar Sesión
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="/users/sign_up" class="nav-link">
-              Sign up
+            <a href="/users/sign_up" class="nav-link" style="color:#D7DBDD">
+              Registrarme
             </a>
           </li>
         <% else %>
           <li class="nav-item">
-            <a href="/users/edit" class="nav-link">
-              Edit profile
+            <a href="/users/edit" class="nav-link" style="color:#D7DBDD">
+              Editar Perfil
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="/users/sign_out" data-method="delete" class="nav-link">
-              Sign out
+            <a href="/users/sign_out" data-method="delete" class="nav-link" style="color:#D7DBDD">
+              Cerrar Sesión
             </a>
           </li>
         <% end %>

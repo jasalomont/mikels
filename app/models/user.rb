@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   # Direct associations
-
+has_one :profile
   # Indirect associations
 
   # Validations

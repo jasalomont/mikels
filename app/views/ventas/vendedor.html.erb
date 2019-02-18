@@ -1,0 +1,47 @@
+
+<div class="col-md-12">
+  <h1>
+    Resumen de Ventas: <%= @profile.name %>
+  </h1>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 style="margin:0px">
+        <span style="text-align:left"><b> Perfil General del Ejecutivo</b></span>
+      </h4>
+    </div>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- agregar foto -->
+        </div>
+        <div class="col-md-4">
+          <dl class="dl-horizontal">
+            <dt >Asesor de Ventas</dt>
+            <dd ><%= @profile.name %> <%= @profile.last_name %></dd>
+            <dt>Código de Colaborador</dt>
+            <dd> <%=@profile.slprsnid %></dd>
+          </dl>
+        </div>
+        <div class="col-md-4">
+          <dl class="dl-horizontal">
+            <dt>Gerencia</dt>
+            <dd><%= @profile.salsterr_id %></dd>
+            <dt>Ciudad Base</dt>
+            <dd><%= @profile.city_base %></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 style="margin:0px">
+          <span style="text-align:left"><b> General </b></span>
+        </h4>
+      </div>
+      </div>
+
+  </div>
+</div>

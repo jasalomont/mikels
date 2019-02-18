@@ -1,11 +1,11 @@
 <div class="row mb-3">
   <div class="col-md-12">
     <h1>
-      All complains
+      Centro de Soporte
     </h1>
 
     <a href="/complains/new" class="btn btn-block btn-outline-secondary">
-      Add a new complain
+      Nueva Aclaración
     </a>
   </div>
 </div>
@@ -19,49 +19,40 @@
 
 
 <hr>
-
+<div class="panel panel-default" style="background-color:#E7E7E7">
+  <div class="panel-heading" >
+    <h3 class="panel-title" style="text-align:center"><b>Tickets Abiertos</b></h3>
+  </div>
 <div class="row mb-3">
   <div class="col-md-12">
     <table class="table">
       <tr>
         <th>
-          ID
+          Folio
         </th>
 
         <th>
-          User
+          Usuario
         </th>
 
         <th>
-          Complaintype
+          Tipo de Aclaración
         </th>
 
         <th>
-          Solved
+          Departamento
         </th>
 
         <th>
-          Description
+          Título
         </th>
 
         <th>
-          Department
+          Producto
         </th>
 
         <th>
-          Itemnmbr
-        </th>
-
-        <th>
-          Sopnumbe
-        </th>
-
-        <th>
-          Profile
-        </th>
-
-        <th>
-          Rating
+          Factura
         </th>
 
         <th>
@@ -69,15 +60,6 @@
         </th>
 
         <th>
-          Title
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
         </th>
 
         <th>
@@ -91,23 +73,19 @@
         </td>
 
         <td>
-          <%= complain.user_id %>
+          <%= complain.user.profile.name %>
         </td>
 
         <td>
-          <%= complain.complaintype_id %>
-        </td>
-
-        <td>
-          <%= complain.solved %>
-        </td>
-
-        <td>
-          <%= complain.description %>
+          <%= complain.complaintype.title %>
         </td>
 
         <td>
           <%= complain.department_id %>
+        </td>
+
+        <td>
+          <%= complain.title %>
         </td>
 
         <td>
@@ -119,7 +97,7 @@
         </td>
 
         <td>
-          <%= complain.profile_id %>
+          <%= complain.status %>
         </td>
 
         <td>
@@ -127,19 +105,7 @@
         </td>
 
         <td>
-          <%= complain.status %>
-        </td>
-
-        <td>
-          <%= complain.title %>
-        </td>
-
-        <td>
           <%= time_ago_in_words(complain.created_at) %> ago
-        </td>
-
-        <td>
-          <%= time_ago_in_words(complain.updated_at) %> ago
         </td>
 
         <td>
@@ -150,6 +116,7 @@
       </tr>
       <% end %>
     </table>
+  </div>
 
     <div class="row mb-3">
       <div class="col-md-12">

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "profiles#index"
+  root :to => "home#dashboard"
+
+  #Routes for ventas
+  get "/ventas/vendedor", :controller => "vendedor", :action => "show"
+
   # Routes for the Customer segment resource:
 
   # CREATE

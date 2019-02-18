@@ -14,7 +14,7 @@ class ComplainsController < ApplicationController
 
   def new_form
     @complain = Complain.new
-
+    @complaintype
     render("complain_templates/new_form.html.erb")
   end
 
@@ -36,7 +36,7 @@ class ComplainsController < ApplicationController
     if @complain.valid?
       @complain.save
 
-      redirect_back(:fallback_location => "/complains", :notice => "Complain created successfully.")
+      redirect_to("/complains/#{@complain.id}", :notice => "Ticket creado exitosamente.")
     else
       render("complain_templates/new_form_with_errors.html.erb")
     end
