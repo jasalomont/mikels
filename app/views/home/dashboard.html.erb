@@ -31,7 +31,11 @@
           <div class="panel-body" style=" padding:20px" align="center">
             <p></p>
             <hr>
+              <% if Profile.where("user_id"=>current_user) != [] %>
             <h4><%= current_user.profile.name %> </h4>
+            <% else %>
+                Bienvenido
+            <% end %>
             <hr>
             <h3 style="margin-bottom:0px">   </h3>
   <% if Salsterr.where("id"=>current_user.profile) != [] %>
