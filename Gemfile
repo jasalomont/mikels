@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 group :development do
-  gem "sqlite3"
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 group :production do
@@ -55,15 +55,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails'
 gem 'shoulda-matchers'
 gem 'devise'
-gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git'
-gem 'web_git', github: 'firstdraft/web_git'
+
+# gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git'
+# gem 'seed_dump', :git => 'https://github.com/firstdraft/seed_dump.git'
+#gem 'web_git', github: 'firstdraft/web_git'
+
 gem 'activeadmin', '1.2.1'
 gem 'carrierwave'
 gem 'cloudinary'
 gem "rollbar"
 gem "kaminari"
 gem "bootstrap4-kaminari-views"
-gem 'seed_dump', :git => 'https://github.com/firstdraft/seed_dump.git'
+
 gem 'activerecord-import'
 gem "ransack"
 gem 'momentjs-rails', '>= 2.9.0'
