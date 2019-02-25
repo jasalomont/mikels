@@ -27,7 +27,7 @@
         <div class="col-md-4">
           <dl class="dl-horizontal">
             <dt>Gerencia</dt>
-            <dd><%= @profile.salsterr_id %></dd>
+            <dd><%= @profile.salsterr.name %></dd>
             <dt>Ciudad Base</dt>
             <dd><%= @profile.city_base %></dd>
           </dl>
@@ -41,7 +41,90 @@
           <span style="text-align:left"><b> General </b></span>
         </h4>
       </div>
+      <p>
+<h5>Ventas 2019</h5>
+</p>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 style="margin:0px">
+          <span style="text-align:left"><b> Mis Clientes </b></span>
+        </h4>
       </div>
+<div class="panel-body">
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <table class="table">
+            <tr>
+
+
+              <th>
+                Código
+              </th>
+
+              <th>
+                Nombre
+              </th>
+
+              <th>
+                Segmento
+              </th>
+
+              <th>
+                Presupuesto
+              </th>
+
+              <th>
+                Avance
+              </th>
+
+              <th>
+              </th>
+            </tr>
+
+            <% @customers.each do |customer| %>
+            <tr>
+
+              <td>
+                <%= customer.custnmbr %>
+              </td>
+
+              <td>
+                <%= customer.custname %>
+              </td>
+                            <td>
+                              Ferretería
+                            </td>
+
+              <td>
+                <%= Budget.where("custnmbr"=>customer.custnmbr)[0].ene %>
+              </td>
+
+              <td>
+                100,000
+              </td>
+
+              <td>
+                <a href="/customers/<%= customer.id %>">
+                  Detalles
+                </a>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <%= paginate @customers, theme: "twitter-bootstrap-4" %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
 
   </div>
 </div>

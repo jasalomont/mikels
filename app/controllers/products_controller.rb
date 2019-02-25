@@ -6,6 +6,13 @@ class ProductsController < ApplicationController
     render("product_templates/index.html.erb")
   end
 
+  def indexcat
+    @qc = Product.ransack(params[:q])
+    @products = @qc.result(:distinct => true).page(params[:page]).per(10)
+
+    render("product_templates/catalogo.html.erb")
+  end
+
   def show
     @product = Product.find(params.fetch("id_to_display"))
 

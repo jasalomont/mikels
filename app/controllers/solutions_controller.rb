@@ -14,6 +14,8 @@ class SolutionsController < ApplicationController
 
   def new_form
     @solution = Solution.new
+    @complainid = params.fetch(:id_to_create)
+    @complain = Complain.find(params.fetch("id_to_create"))
 
     render("solution_templates/new_form.html.erb")
   end
@@ -32,7 +34,7 @@ class SolutionsController < ApplicationController
     if @solution.valid?
       @solution.save
 
-      redirect_back(:fallback_location => "/solutions", :notice => "Solution created successfully.")
+      redirect_to("/complains/#{@solution.complain_id}", :notice => "Solution created successfully.")
     else
       render("solution_templates/new_form_with_errors.html.erb")
     end

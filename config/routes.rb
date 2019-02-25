@@ -166,6 +166,7 @@ Rails.application.routes.draw do
 
   # READ
   get("/products", { :controller => "products", :action => "index" })
+  get("/catalogo", { :controller => "products", :action => "indexcat" })
   get("/products/:id_to_display", { :controller => "products", :action => "show" })
 
   # UPDATE
@@ -181,6 +182,7 @@ Rails.application.routes.draw do
 
   # CREATE
   get("/solutions/new", { :controller => "solutions", :action => "new_form" })
+  get("/solutions/new/:id_to_create", { :controller => "solutions", :action => "new_form" })
   post("/create_solution", { :controller => "solutions", :action => "create_row" })
 
   # READ

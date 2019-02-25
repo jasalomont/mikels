@@ -8,6 +8,11 @@ class ComplainsController < ApplicationController
 
   def show
     @complain = Complain.find(params.fetch("id_to_display"))
+    if @complain.solution != nil
+      @solution = @complain.solution.message
+    else
+      @solution = ""
+    end
 
     render("complain_templates/show.html.erb")
   end

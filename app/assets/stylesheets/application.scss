@@ -1,9 +1,24 @@
 @charset "utf-8";
 @import 'bootstrap-datetimepicker';
 
+
+h1 {
+color: #f8f9fa;
+}
+
+.btn {
+  background-color:  #343a40;
+  color: #f8f9fa;
+}
+
 .btn-md {
   background-color: #A00000;
-  border: 1px solid #908B8B;;
+  border: 1px solid #908B8B;
+}
+
+.btn-sm {
+  background-color: #A00000;
+  border: 1px solid #908B8B;
 }
 
 .btn-md:hover {
@@ -397,4 +412,16 @@ tbody.collapse.in {
 }
 body {
   background-color: #515A5A;
+}
+
+.boxed {
+  border: 1px solid #E5E7E9 ;
+  background-color: #AED6F1;
+  padding: 10px 10px;
+}
+
+.boxed-s {
+  border: 1px solid #E5E7E9 ;
+  background-color: #D1F2EB;
+  padding: 10px 10px;
 }

@@ -1,29 +1,111 @@
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
-    <h1>
-      Complain #<%= @complain.id %> details
-    </h1>
+    <h3>
+      Aclaración #<%= @complain.id %>
+    </h3>
+    <% if @complain.profile_id == current_user.profile.user_id%>
+    <a href="/solutions/new/<%=@complain.id%>" class="btn btn-block btn-outline-secondary">
+      Contestar
+    </a>
+    <% end %>
+    <br>
+
+    <div class="container">
+      <div class="panel">
+        <div class="panel-heading">
+          <h4 class="panel-title"><b> <%= @complain.title %></b></h4>
+        </div>
+        <div class="panel-body" style=" padding:0px" align="center">
+          <div class="row">
+            <div class="col-sm-3"><%= @complain.user_id %></div>
+            <div class="col-sm-3"><%= @complain.complaintype.title %></div>
+            <div class="col-sm-3"><%= @complain.department_id %></div>
+            <div class="col-sm-3"><%= @complain.status %></div>
+          </div>
+          <hr style=" border-top:3px solid #284B63">
+          <div class="row">
+            <div class="col-sm-8"></div>
+          </div>
+          <div class="row col-sm-12">
+            <div class="boxed col-sm-9">
+              <%= @complain.description %>
+              <div class="col-xs-3"></div>
+            </div>
+            <div class="col-xs-3 col-sm-9"></div>
+          </div>
+          <br>
+          <div class="row col-sm-12">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+              <% if @solution == "" %>
+              <% else %>
+              <div class="boxed-s">
+                <%= @solution%>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="row"></div>
+          <div class="row">
+            <div class="col-sm-offset-1 col-sm-8" >
+
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-8">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <div class="row mb-3">
       <div class="col">
-        <a href="/complains" class="btn btn-block btn-outline-secondary">
-          Go back
+        <a href="/complains/" class="btn btn-block btn-outline-secondary">
+          Regresar
         </a>
       </div>
-
+      <% if current_user.id == @complain.user_id %>
       <div class="col">
         <a href="/complains/<%= @complain.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit complain
+          Editar Aclaración
         </a>
       </div>
 
       <div class="col">
         <a href="/delete_complain/<%= @complain.id %>" class="btn btn-block btn-outline-secondary">
-          Delete complain
+          Eliminar Aclaración
         </a>
       </div>
     </div>
 
+    <div class="row md-3">
+      <div class="col">
+      <form action="/update_complain/<%= @complain.id %>" method="post">
+        <input type="hidden" id="user_id" name="user_id" class="form-control" value="<%= @complain.user_id %>">
+        <input type="hidden" id="complaintype_id" name="complaintype_id" class="form-control" value="<%= @complain.complaintype_id %>">
+        <input type="hidden" value="1" name="solved">
+        <input type="hidden" id="description" name="description" class="form-control" rows="3" value="<%= @complain.description %>">
+        <input type="hidden" id="department_id" name="department_id" class="form-control" value="<%= @complain.department_id %>">
+        <input type="hidden" id="itemnmbr" name="itemnmbr" class="form-control" value="<%= @complain.itemnmbr %>">
+        <input type="hidden" id="sopnumbe" name="sopnumbe" class="form-control" value="<%= @complain.sopnumbe %>">
+        <input type="hidden" id="profile_id" name="profile_id" class="form-control" value="<%= @complain.profile_id %>">
+        <input type="hidden" id="rating" name="rating" class="form-control" value="<%= @complain.rating %>">
+        <input type="hidden" id="status" name="status" class="form-control" value="Resuelta">
+        <input type="hidden" id="title" name="title" class="form-control" value="<%= @complain.title %>">
+        <button class="btn btn-block btn-outline-secondary">
+          Cerrar ticket/aclaración
+        </button>
+      </form>
+        </div>
+    </div>
+  </div>
+
+  <%end%>
+  <!--
     <dl>
       <dt>
         User
@@ -115,7 +197,6 @@
       <dd>
         <%= time_ago_in_words(@complain.updated_at) %> ago
       </dd>
-    </dl>
+    </dl> -->
   </div>
 </div>
-
