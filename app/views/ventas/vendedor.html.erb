@@ -76,7 +76,7 @@
               </th>
 
               <th>
-                Avance
+                Ventas
               </th>
 
               <th>
@@ -98,11 +98,11 @@
                             </td>
 
               <td>
-                <%= Budget.where("custnmbr"=>customer.custnmbr)[0].ene %>
+                <%= number_to_currency(Budget.where("custnmbr"=>customer.custnmbr)[0].ene) %>
               </td>
 
               <td>
-                100,000
+                100,000.00
               </td>
 
               <td>

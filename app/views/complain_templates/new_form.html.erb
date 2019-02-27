@@ -40,23 +40,23 @@
     <label for="department_id">
       Departamento al que hace referencia
     </label>
+    <%= select_tag(:department_id, options_from_collection_for_select(Department.all, :id,:name), :class =>"form-control") %>
 
-    <input type="text" id="department_id" name="department_id" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="profile_id">
       Personal responsable
     </label>
-    <input type="text" id="profile_id" name="profile_id" class="form-control">
+      <%= select_tag(:profile_id, options_from_collection_for_select(Profile.all, :user_id,:name), :class =>"form-control") %>
+
   </div>
 
   <div class="form-group">
     <label for="itemnmbr">
       Código de producto (Solo Si Aplica)
     </label>
-
-    <input type="text" id="itemnmbr" name="itemnmbr" class="form-control">
+    <%= select_tag(:itemnmbr, options_from_collection_for_select(Product.all, :itemnmbr, :itemnmbr), :class =>"form-control") %>
   </div>
 
   <div class="form-group">
@@ -67,13 +67,13 @@
     <input type="text" id="sopnumbe" name="sopnumbe" class="form-control">
   </div>
 
-  <!-- <div class="form-check">
+  <div class="form-check">
     <input type="hidden" value="0" name="solved">
-    <input id="solved" class="form-check-input" name="solved" type="checkbox" value="1" <%= "checked" if @complain.solved %>>
+
     <label for="solved" class="form-check-label">
-      Marcar si el problema ha sido resuelto
+
     </label>
-  </div> -->
+  </div>
 
 
   <div class="form-group">
