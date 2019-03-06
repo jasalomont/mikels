@@ -52,6 +52,7 @@
         </th>
 
         <th>
+          Fecha
         </th>
 
         <th>
@@ -65,7 +66,7 @@
         </td>
 
         <td>
-          <%= complain.user_id %>
+          <%= User.find(complain.user_id).profile.slprsnid %>
         </td>
 
         <td>
@@ -88,9 +89,6 @@
           <% end %>
         </td>
 
-        <td>
-          <%= complain.rating %>
-        </td>
 
         <td>
           <%= time_ago_in_words(complain.created_at) %>
@@ -171,6 +169,10 @@
         </th>
 
         <th>
+          Fecha
+        </th>
+
+        <th>
         </th>
       </tr>
 
@@ -181,7 +183,7 @@
         </td>
 
         <td>
-          <%= complain.user_id %>
+          <%= User.find(complain.user_id).profile.slprsnid %>
         </td>
 
         <td>

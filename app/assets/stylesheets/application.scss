@@ -1,7 +1,13 @@
 @charset "utf-8";
 @import 'bootstrap-datetimepicker';
 
-
+.table {
+        width: 100%;
+         -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        display: block;
+    }
+    
 h1 {
 color: #f8f9fa;
 }

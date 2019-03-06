@@ -7,100 +7,81 @@
 <form action="/update_complain/<%= @complain.id %>" method="post">
 
   <div class="form-group">
-    <label for="user_id">
-      User
-    </label>
-
-    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @complain.user_id %>">
+    <input type="hidden" id="user_id" name="user_id" class="form-control" value="<%= @complain.user_id %>">
   </div>
 
   <div class="form-group">
-    <label for="complaintype_id">
-      Complaintype
-    </label>
-
-    <input type="text" id="complaintype_id" name="complaintype_id" class="form-control" value="<%= @complain.complaintype_id %>">
+    <input type="hidden" id="complaintype_id" name="complaintype_id" class="form-control" value="<%= @complain.complaintype_id %>">
   </div>
 
   <div class="form-check">
     <input type="hidden" value="0" name="solved">
     <input id="solved" class="form-check-input" name="solved" type="checkbox" value="1" <%= "checked" if @complain.solved %>>
     <label for="solved" class="form-check-label">
-      Solved
+      Seleccionar si la aclaración ha sido resuelta
     </label>
   </div>
 
   <div class="form-group">
+    <label for="title">
+      Título de Aclaración
+    </label>
+
+    <input type="text" id="title" name="title" class="form-control" value="<%= @complain.title %>">
+  </div>
+
+  <div class="form-group">
     <label for="description">
-      Description
+      Descripión
     </label>
 
     <textarea id="description" name="description" class="form-control" rows="3"><%= @complain.description %></textarea>
   </div>
 
   <div class="form-group">
-    <label for="department_id">
-      Department
-    </label>
-
-    <input type="text" id="department_id" name="department_id" class="form-control" value="<%= @complain.department_id %>">
+    <input type="hidden" id="department_id" name="department_id" class="form-control" value="<%= @complain.department_id %>">
   </div>
 
   <div class="form-group">
     <label for="itemnmbr">
-      Itemnmbr
+      Código de producto (Solo Si Aplica)
     </label>
 
-    <input type="text" id="itemnmbr" name="itemnmbr" class="form-control" value="<%= @complain.itemnmbr %>">
+    <input type="hidden" id="itemnmbr" name="itemnmbr" class="form-control" value="<%= @complain.itemnmbr %>">
   </div>
 
   <div class="form-group">
     <label for="sopnumbe">
-      Sopnumbe
+      #Factura o #Pedido (Solo Si Aplica)
     </label>
 
     <input type="text" id="sopnumbe" name="sopnumbe" class="form-control" value="<%= @complain.sopnumbe %>">
   </div>
 
   <div class="form-group">
-    <label for="profile_id">
-      Profile
-    </label>
-
-    <input type="text" id="profile_id" name="profile_id" class="form-control" value="<%= @complain.profile_id %>">
+    <input type="hidden" id="profile_id" name="profile_id" class="form-control" value="<%= @complain.profile_id %>">
   </div>
 
   <div class="form-group">
     <label for="rating">
-      Rating
+      Calificación de respuesta (1-10)
     </label>
 
     <input type="text" id="rating" name="rating" class="form-control" value="<%= @complain.rating %>">
   </div>
 
   <div class="form-group">
-    <label for="status">
-      Status
-    </label>
-
-    <input type="text" id="status" name="status" class="form-control" value="<%= @complain.status %>">
+    <input type="hidden" id="status" name="status" class="form-control" value="<%= @complain.status %>">
   </div>
 
-  <div class="form-group">
-    <label for="title">
-      Title
-    </label>
-
-    <input type="text" id="title" name="title" class="form-control" value="<%= @complain.title %>">
-  </div>
 
   <button class="btn btn-block btn-outline-secondary">
-    Update complain
+    Actualizar Aclaración
   </button>
 </form>
 
 <hr>
 
 <a href="/complains">
-  Go back
+  Regresar
 </a>

@@ -16,6 +16,13 @@ group :production do
   gem "pg"
   gem "rails_12factor"
 end
+
+gem 'bootstrap-sass'
+gem 'fog'
+gem "mini_magick"
+gem "fog-aws"
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

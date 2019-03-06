@@ -34,7 +34,7 @@ class SolutionsController < ApplicationController
     if @solution.valid?
       @solution.save
 
-      redirect_to("/complains/#{@solution.complain_id}", :notice => "Solution created successfully.")
+      redirect_to("/complains/#{@solution.complain_id}")
     else
       render("solution_templates/new_form_with_errors.html.erb")
     end

@@ -9,7 +9,8 @@ class ComplainsController < ApplicationController
   def show
     @complain = Complain.find(params.fetch("id_to_display"))
     if @complain.solution != nil
-      @solution = @complain.solution.message
+      @solution = Solution.where("complain_id"=>params.fetch("id_to_display"))
+
     else
       @solution = ""
     end
