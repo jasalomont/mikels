@@ -8,6 +8,8 @@ class VendedorController < ApplicationController
     @q = Customer.ransack(params[:q])
     @customers = @q.result(:distinct => true).page(params[:page]).per(10)
 
+
+
     render("ventas/vendedor.html.erb")
   end
 

@@ -17,7 +17,7 @@ group :production do
   gem "rails_12factor"
 end
 
-gem 'bootstrap-sass'
+
 gem 'fog'
 gem "mini_magick"
 gem "fog-aws"
@@ -65,7 +65,7 @@ gem 'devise'
 
 # gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git'
 # gem 'seed_dump', :git => 'https://github.com/firstdraft/seed_dump.git'
-#gem 'web_git', github: 'firstdraft/web_git'
+# gem 'web_git', github: 'firstdraft/web_git'
 
 gem 'activeadmin', '1.2.1'
 gem 'carrierwave'
