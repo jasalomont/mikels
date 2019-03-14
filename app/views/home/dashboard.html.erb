@@ -59,6 +59,11 @@
               <tr>
                 <td class="allianz-title" style="font-size:15px"><b> <i class="fa fa-caret-right" aria-hidden="true"></i> Mensajes Directos</b></td>
               </tr>
+
+              <tr>
+                <td><%= Complain.where("user_id"=> current_user.id).count %> </td>
+              </tr>
+
               <tr>
                 <td class="allianz-title" style="font-size:15px"><b><i class="fa fa-caret-right" aria-hidden="true"></i> Centro de Servicio</b></td>
               </tr>
@@ -113,7 +118,7 @@
                   <p>Analisis de Ventas</p>
                   <br>
                   <div class="btn-group btn-group-justified">
-                    <a href="/ventas/vendedor" class="btn btn-md btn-info"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="/ventas/vendedor/<%= current_user.profile.slprsnid %>" class="btn btn-md btn-info"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -140,10 +145,10 @@
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h3><i class="fa fa-inbox" aria-hidden="true"></i> Soporte </h3>
-                  <p>Comunicación y seguimiento</p>
+                  <p>Centro de Aclaraciones</p>
                   <br>
                   <div class="btn-group btn-group-justified">
-                    <a href="/complains" class="btn btn-md btn-info"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="/complainuser" class="btn btn-md btn-info"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -152,11 +157,11 @@
             <div class="col-md-4">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Analytics</h3>
-                  <p> Datos y estrategias de venta </p>
+                  <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>Control</h3>
+                  <p> Panel de Seguimiento </p>
                   <br>
                   <div class="btn-group btn-group-justified">
-                    <a href="/" class="btn btn-md btn-info">Proximamente</a>
+                    <a href="/complainspec/<%= Salsterr.find(current_user.profile.salsterr_id).department.id %>" class="btn btn-md btn-info"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>

@@ -96,9 +96,10 @@
 
       <div class="row mb-3">
         <div class="col">
-          <a href="/complains/" class="btn btn-block btn-outline-secondary">
-            Regresar
-          </a>
+          <div class="btn btn-block btn-outline-secondary">
+            <%= link_to "Regresar", :back %>
+          </div>
+
         </div>
         <% if current_user.id == @complain.user_id && @complain.solved == false %>
         <div class="col">

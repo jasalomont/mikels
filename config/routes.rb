@@ -4,7 +4,14 @@ Rails.application.routes.draw do
   root :to => "home#dashboard"
 
   #Routes for ventas
-  get "/ventas/vendedor", :controller => "vendedor", :action => "show"
+  get "/ventas/vendedor/:id_vendedor", :controller => "vendedor", :action => "show"
+
+  # READ Orgchart
+  get("/orgcharts", { :controller => "orgcharts", :action => "index" })
+  # CREATE
+  get("/orgcharts/new", { :controller => "orgcharts", :action => "new_form" })
+  post("/create_orgchart", { :controller => "orgcharts", :action => "create_row" })
+
 
   # Routes for the Customer segment resource:
 
@@ -244,6 +251,8 @@ Rails.application.routes.draw do
 
   # READ
   get("/complains", { :controller => "complains", :action => "index" })
+  get("/complainuser", { :controller => "complains", :action => "indexuser" })
+  get("/complainspec/:id_to_display", { :controller => "complains", :action => "indexspec" })
   get("/complains/:id_to_display", { :controller => "complains", :action => "show" })
 
   # UPDATE

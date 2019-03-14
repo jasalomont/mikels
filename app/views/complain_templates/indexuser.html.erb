@@ -1,0 +1,232 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      Centro de Soporte
+    </h1>
+
+    <a href="/complains/new" class="btn btn-block btn-outline-secondary">
+      Nueva Aclaración
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-3">
+    <%= render partial: "complain_templates/complainuser_search_form" %>
+  </div>
+</div>
+
+<hr>
+<div class="panel panel-default" style="background-color:#E7E7E7">
+  <div class="panel-heading" >
+    <h3 class="panel-title" style="text-align:center"><b>Tickets Abiertos</b></h3>
+  </div>
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          Folio
+        </th>
+
+        <th>
+          Usuario
+        </th>
+
+        <th>
+          Tipo de Aclaración
+        </th>
+
+        <th>
+          Departamento
+        </th>
+
+        <th>
+          Título
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Fecha
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @complains.where("solved" => false, "user_id"=>current_user.id).each do |complain| %>
+      <tr>
+        <td>
+          <%= complain.id %>
+        </td>
+
+        <td>
+          <%= User.find(complain.user_id).profile.slprsnid %>
+        </td>
+
+        <td>
+          <%= complain.complaintype.title %>
+        </td>
+
+        <td>
+          <%= complain.department.name %>
+        </td>
+
+        <td>
+          <%= complain.title %>
+        </td>
+
+        <td>
+          <% if complain.solution != nil %>
+          Respuesta
+          <% else %>
+          <%= complain.status %>
+          <% end %>
+        </td>
+
+
+        <td>
+          <%= time_ago_in_words(complain.created_at) %>
+        </td>
+
+        <td>
+          <% if complain.profile_id==current_user.id %>
+          <form action="/update_complain/<%= complain.id %>" method="post">
+            <input type="hidden" id="user_id" name="user_id" class="form-control" value="<%=complain.user_id %>">
+            <input type="hidden" id="complaintype_id" name="complaintype_id" class="form-control" value="<%= complain.complaintype_id %>">
+            <input type="hidden" name="solved" value="<%= complain.solved %>">
+            <input type="hidden" id="description" name="description" class="form-control" rows="3" value="<%= complain.description %>">
+            <input type="hidden" id="department_id" name="department_id" class="form-control" value="<%= complain.department_id %>">
+            <input type="hidden" id="itemnmbr" name="itemnmbr" class="form-control" value="<%= complain.itemnmbr %>">
+            <input type="hidden" id="sopnumbe" name="sopnumbe" class="form-control" value="<%= complain.sopnumbe %>">
+            <input type="hidden" id="profile_id" name="profile_id" class="form-control" value="<%= complain.profile_id %>">
+            <input type="hidden" id="rating" name="rating" class="form-control" value="<%= complain.rating %>">
+            <input type="hidden" id="status" name="status" class="form-control" value="Abierta">
+            <input type="hidden" id="title" name="title" class="form-control" value="<%= complain.title %>">
+            <button class="btn btn-sm btn-info">
+              Abrir
+            </button>
+          </form>
+          <% else %>
+          <a href="/complains/<%= complain.id %>" class="btn btn-sm btn-info">
+           Abrir
+          </a>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <%= paginate @complains, theme: "twitter-bootstrap-4" %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="panel panel-default" style="background-color:#E7E7E7">
+  <div class="panel-heading" >
+    <h3 class="panel-title" style="text-align:center"><b>Tickets Cerrados</b></h3>
+  </div>
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          Folio
+        </th>
+
+        <th>
+          Usuario
+        </th>
+
+        <th>
+          Tipo de Aclaración
+        </th>
+
+        <th>
+          Departamento
+        </th>
+
+        <th>
+          Título
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Calificación
+        </th>
+
+        <th>
+          Fecha
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @complains.where("solved" => true, "user_id"=>current_user.id).each do |complain| %>
+      <tr>
+        <td>
+          <%= complain.id %>
+        </td>
+
+        <td>
+          <%= User.find(complain.user_id).profile.slprsnid %>
+        </td>
+
+        <td>
+          <%= complain.complaintype.title %>
+        </td>
+
+        <td>
+          <%= complain.department.name %>
+        </td>
+
+        <td>
+          <%= complain.title %>
+        </td>
+
+        <td>
+          <% if complain.solution != nil %>
+          Resuelta
+          <% else %>
+          <%= complain.status %>
+          <% end %>
+        </td>
+
+        <td>
+          <%= complain.rating %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(complain.created_at) %>
+        </td>
+
+        <td>
+          <a href="/complains/<%= complain.id %>" class="btn btn-sm btn-info">
+           Abrir
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <%= paginate @complains, theme: "twitter-bootstrap-4" %>
+      </div>
+    </div>
+
+  </div>
+</div>

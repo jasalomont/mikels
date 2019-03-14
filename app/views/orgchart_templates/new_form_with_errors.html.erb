@@ -1,0 +1,53 @@
+<% if @orgchart.present? %>
+  <% if @orgchart.errors.any? %>
+    <% @orgchart.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new 
+</h1>
+
+
+<hr>
+
+<form action="/create_orgchart" method="post">
+
+  <div class="form-group">
+    <label for="department_id">
+      department_id
+    </label>
+
+    <input type="text" id="department_id" name="department_id" class="form-control" value="<%= @orgchart.department_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="salsterr_id">
+      salsterr_id
+    </label>
+
+    <input type="text" id="salsterr_id" name="salsterr_id" class="form-control" value="<%= @orgchart.salsterr_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="slprsnid">
+      slprsnid
+    </label>
+
+    <input type="text" id="slprsnid" name="slprsnid" class="form-control" value="<%= @orgchart.slprsnid %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create
+  </button>
+</form>
+
+<hr>
+
+<a href="/orgcharts">
+  Go back
+</a>

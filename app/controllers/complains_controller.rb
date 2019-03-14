@@ -6,6 +6,20 @@ class ComplainsController < ApplicationController
     render("complain_templates/index.html.erb")
   end
 
+  def indexspec
+    @q = Complain.where("department_id"=>params.fetch("id_to_display")).ransack(params[:q])
+    @complains = @q.result(:distinct => true).page(params[:page]).per(10)
+
+    render("complain_templates/indexspec.html.erb")
+  end
+
+  def indexuser
+    @q2 = Complain.ransack(params[:q])
+    @complains = @q2.result(:distinct => true).page(params[:page]).per(10)
+
+    render("complain_templates/indexuser.html.erb")
+  end
+
   def show
     @complain = Complain.find(params.fetch("id_to_display"))
     if @complain.solution != nil
@@ -83,6 +97,6 @@ class ComplainsController < ApplicationController
 
     @complain.destroy
 
-    redirect_to("/complains", :notice => "Complain deleted successfully.")
+    redirect_to("/complainuser", :notice => "Complain deleted successfully.")
   end
 end
