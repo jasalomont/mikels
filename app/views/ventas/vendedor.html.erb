@@ -98,7 +98,7 @@
                             </td>
 
               <td>
-                <%= number_to_currency(Budget.where("custnmbr"=>customer.custnmbr)[0].ene+Budget.where("custnmbr"=>customer.custnmbr)[0].feb+Budget.where("custnmbr"=>customer.custnmbr)[0].mar+Budget.where("custnmbr"=>customer.custnmbr)[0].abr) %>
+                <%= number_to_currency(Budget.where("custnmbr"=>customer.custnmbr)[0].total) %>
               </td>
 
               <td>
