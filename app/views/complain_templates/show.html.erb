@@ -69,12 +69,12 @@
         </div>
 
       </div>
-      <% if @complain.profile_id == current_user.profile.user_id && @complain.solved == false %>
+      <% if @complain.department_id == Salsterr.find(current_user.profile.salsterr_id).department.id && @complain.solved == false %>
 
       <form action="/create_solution" method="post">
         <div class="form-group">
-          <div class="row">
-            <textarea id="message" name="message" class="form-control col-md-10" rows="3"></textarea>
+          <div class="row col-md-12">
+            <textarea id="message" name="message" class="form-control col-md-10" rows="2"></textarea>
 
             <input type="hidden" id="complain_id" name="complain_id" class="form-control" value="<%= @complain.id %>">
             <input type="hidden" id="title" name="title" class="form-control" value="Re: <%= @complain.title %>">
