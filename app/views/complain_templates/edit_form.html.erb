@@ -14,13 +14,6 @@
     <input type="hidden" id="complaintype_id" name="complaintype_id" class="form-control" value="<%= @complain.complaintype_id %>">
   </div>
 
-  <div class="form-check">
-    <input type="hidden" value="0" name="solved">
-    <input id="solved" class="form-check-input" name="solved" type="checkbox" value="1" <%= "checked" if @complain.solved %>>
-    <label for="solved" class="form-check-label">
-      Seleccionar si la aclaración ha sido resuelta
-    </label>
-  </div>
 
   <div class="form-group">
     <label for="title">
@@ -64,10 +57,18 @@
 
   <div class="form-group">
     <label for="rating">
-      Calificación de respuesta (1-10)
+      Calificación de respuesta (1-4)
     </label>
 
     <input type="text" id="rating" name="rating" class="form-control" value="<%= @complain.rating %>">
+  </div>
+
+  <div class="form-check">
+    <input type="hidden" value="0" name="solved">
+    <input id="solved" class="form-check-input" name="solved" type="checkbox" value="1" <%= "checked" if @complain.solved %>>
+    <label for="solved" class="form-check-label">
+      Seleccionar si la aclaración ha sido resuelta
+    </label>
   </div>
 
   <div class="form-group">
